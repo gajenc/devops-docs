@@ -40,6 +40,7 @@
 * [12. Tracing](digit-devops-training/12.-tracing.md)
 * [13. Logging](digit-devops-training/13.-logging.md)
 * [14. Observability](digit-devops-training/14.-observability.md)
+* [15. Security](digit-devops-training/15.-security.md)
 
 ## Hiring DevOps
 
