@@ -26,6 +26,7 @@
 
 ## DIGIT - DevOps KT videos <a id="digit-devops-training"></a>
 
+* [DIGIT DevOps Practice](digit-devops-training/digit-devops-practice.md)
 * [1. DIGIT Architecture](digit-devops-training/1.-digit-architecture.md)
 * [2. GitRepos - Branching](digit-devops-training/2.-gitrepos-branching.md)
 * [3. Infra setup - Terraform](digit-devops-training/3.-infra-setup-terraform.md)
