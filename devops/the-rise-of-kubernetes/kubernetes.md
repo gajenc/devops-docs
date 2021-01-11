@@ -1,14 +1,10 @@
 ---
-description: Kubernetes an overview
+description: Kubernetes architecture overview
 ---
 
-# Kubernetes
+# Kubernetes Architecture
 
-## The Big Why <a id="the-big-why"></a>
 
-Kubernetes project started in the year 2014 with more than a decade of experience of running production workloads at Google. Kubernetes has now become the de facto standard for deploying containerized applications at scale in private, public and hybrid cloud environments. The largest public cloud platforms [AWS](https://aws.amazon.com/ecs/), [Google Cloud](https://cloud.google.com/kubernetes-engine/), [Azure](https://azure.microsoft.com/en-us/services/container-service/), [IBM Cloud](https://www.ibm.com/cloud/container-service) and [Oracle Cloud](https://cloud.oracle.com/containers) now provide managed services for Kubernetes. A few years back RedHat, Mesosphere, Pivotal, VMware, Nutanix and more providers completely redesigned their implementation with Kubernetes and collaborated with the Kubernetes community for implementing the next generation container platform with incorporated key features of Kubernetes such as container grouping, overlay networking, layer 4 routing, secrets, etc. Today many organizations & technology providers adapting kubernetes at a rapid phase.
-
-## Kubernetes Architecture <a id="kubernetes-architecture"></a>
 
 ![](https://gblobscdn.gitbook.com/assets%2F-MERG_iQW5oN4ukgXP8K%2Fsync%2F92b9efa3a1fe6d948cff41ba8e602ba7da8f5688.png?alt=media)
 

@@ -1,4 +1,4 @@
-# On Cloud
+# On Public Cloud
 
 1. \*\*\*\*[**Provisioning Kubernetes on AWS - EKS using terraform**](https://learn.hashicorp.com/tutorials/terraform/eks)\*\*\*\*
 2. \*\*\*\*[**Provisioning Kubernetes on Azure - AKS using terraform**](https://learn.hashicorp.com/tutorials/terraform/aks?in=terraform/kubernetes)\*\*\*\*

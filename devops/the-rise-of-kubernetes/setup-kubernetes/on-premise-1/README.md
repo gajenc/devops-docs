@@ -2,7 +2,7 @@
 description: What you need to know when setting up Kubernetes yourself
 ---
 
-# On-premise
+# On Private Cloud
 
 Running Kubernetes on-premise gives developers a cloud-native experience or sets up to be cloud-agnostic.
 
