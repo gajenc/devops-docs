@@ -1,15 +1,8 @@
 ---
-description: >-
-  Kubernetes is an open-source container-orchestration system for automating
-  computer application deployment, scaling, and management. It helps running
-  dockers and containerized microservices.
+description: Kubernetes an overview
 ---
 
 # Kubernetes
-
-## Overview <a id="overview"></a>
-
-This page explains why Kubernetes is required. It deep dives into the key benefits of using Kubernetes to run a large containerized platform like DIGIT in production environments.
 
 ## The Big Why <a id="the-big-why"></a>
 
