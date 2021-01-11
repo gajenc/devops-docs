@@ -2,13 +2,13 @@
 
 * [Intent of the Blog](README.md)
 
-## know devops <a id="devops"></a>
+## Introduction to devops <a id="devops"></a>
 
 * [What is DevOps?](devops/devops-building-blocks.md)
+* [The Rise Of Technology](devops/the-rise-of-technology.md)
 * [Microservices](devops/microservices.md)
-* [Infra-as-code\(IaC\)](devops/untitled-1/README.md)
-  * [Terraform](devops/untitled-1/terraform.md)
-  * [Ansible](devops/untitled-1/ansible.md)
+* [Docker](devops/docker.md)
+* [Public & Private Clouds](devops/public-and-private-clouds.md)
 * [Kubernetes](devops/kubernetes/README.md)
   * [Setup Kubernetes](devops/kubernetes/setup-kubernetes/README.md)
     * [On Cloud](devops/kubernetes/setup-kubernetes/on-cloud.md)
@@ -22,9 +22,12 @@
     * [Distributed Tracing](devops/kubernetes/traceability/untitled.md)
     * [Logging](devops/kubernetes/traceability/untitled-1.md)
     * [Monitoring & Alerts](devops/kubernetes/traceability/monitoring-and-alerts.md)
+* [Infra-as-code\(IaC\)](devops/untitled-1/README.md)
+  * [Terraform](devops/untitled-1/terraform.md)
+  * [Ansible](devops/untitled-1/ansible.md)
 * [CI/CD](devops/untitled.md)
 
-## DIGIT - DevOps KT videos <a id="digit-devops-training"></a>
+## DIGIT DevOps <a id="digit-devops-training"></a>
 
 * [DIGIT DevOps Practice](digit-devops-training/digit-devops-practice.md)
 * [1. DIGIT Architecture](digit-devops-training/1.-digit-architecture.md)
