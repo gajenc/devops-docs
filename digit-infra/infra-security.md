@@ -1,4 +1,4 @@
-# Infra Security
+# Security Recommendations
 
 ## Introduction <a id="introduction"></a>
 
@@ -7,8 +7,6 @@ Security is always a difficult subject to approach either by the lack of experie
 Security is a major concern when it comes to government systems and infra. As an architect, we can consider that working with technically educated people \(engineers, experts\) and tools \(systems, frameworks, IDE\) should prevent key VAPT issues.
 
 However, it’s quite difficult to avoid, a certain infatuation from different categories of people to try to hack the systems.
-
-## Infra Security Recommendations <a id="infra-security"></a>
 
 ## 1. Update to the latest version <a id="1-update-to-the-latest-version"></a>
 

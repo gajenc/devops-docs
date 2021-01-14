@@ -1,14 +1,16 @@
+---
+description: >-
+  This document covers the minimal hardware recommendations for the DIGIT
+  Platform deployed on Kubernetes cluster.
+---
+
 # Infra Recommendation
 
 DIGIT urges to take advantage of managed kubernetes services like EKS offered by Amazon, AKS offered by Microsoft, GKE offered by GKE and RKE offered by NIC \(GI Cloud\). But it never stops you to create your own kubernetes cluster from any of your available existing infrastructure.
 
 In case of managed services most of the operations are taken care, where as in the manual provisioning apart from managing just the application workload you may have to put additional efforts to maintain your own cluster from the elasticity, HA, DRS point of view.
 
-## Kubernetes Cluster Hardware Recommendations
-
-### Overview <a id="overview"></a>
-
-This document covers the minimal hardware recommendations for the DIGIT Platform deployed on Kubernetes cluster. 
+## Hardware Recommendations
 
 ### Master Node VM Estimation <a id="kublr-platform-feature-requirements"></a>
 

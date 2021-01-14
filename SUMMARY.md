@@ -34,8 +34,8 @@
 * [Infra Requirement](digit-infra/infra-requirement.md)
 * [Public Cloud vs SDC \(Private\)](digit-infra/public-cloud-vs-sdc-private.md)
 * [Infra Recommendation](digit-infra/infra-recommendation.md)
-* [Infra Security](digit-infra/infra-security.md)
-* [Operational Excellence](digit-infra/operational-excellence.md)
+* [Security Recommendations](digit-infra/infra-security.md)
+* [Operational Recommendations](digit-infra/operational-excellence.md)
 
 ## DIGIT - DevOps
 
@@ -65,5 +65,6 @@
     * [MCQ 1](hiring-devops/devops-hiring/devops-questions-mcq/multiple-choice-questions.md)
     * [MCQ 2](hiring-devops/devops-hiring/devops-questions-mcq/mcq-2.md)
     * [MCQ 3](hiring-devops/devops-hiring/devops-questions-mcq/mcq-3.md)
-  * [Exercise \(2nd Level\)](hiring-devops/devops-hiring/devops-exercise.md)
+  * [Exercise 1: \(2nd Level\)](hiring-devops/devops-hiring/devops-exercise.md)
+  * [Exercise 2:](hiring-devops/devops-hiring/exercise-2.md)
 

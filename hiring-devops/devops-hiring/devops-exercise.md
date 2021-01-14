@@ -2,7 +2,7 @@
 description: Exercise to evaluate the DevOps skills (3 Hours)
 ---
 
-# Exercise \(2nd Level\)
+# Exercise 1: \(2nd Level\)
 
 ## **Questions: \(0.5 Hours\)**
 
