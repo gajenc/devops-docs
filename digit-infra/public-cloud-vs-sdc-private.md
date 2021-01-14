@@ -4,7 +4,7 @@ To see many of the advantages of cloud computing without its risks, many enterpr
 
 That's the general view of after the realtime challenges, private clouds often add up to more trouble than they're worth. Public cloud may ultimately be a better choice for enterprises from the elasticity, up-to-date, managed services, pay-as-u-go, VPCs, options, support, community, tools, etc.
 
-Some may not agree bout on-premises — in fact, I expect violent disagreement. And this is more of an either/or argument, rather than raising the possibility of blended strategies, such as employing public clouds as test beds, but keeping applications in production within private clouds.
+Some may not agree about on-premises — in fact, I expect violent disagreement. And this is more of an either/or argument, rather than raising the possibility of blended strategies, such as employing public clouds as test beds, but keeping applications in production within private clouds.
 
 That said, here are the points about public cloud and against private cloud \(SDCs\):
 
