@@ -10,7 +10,7 @@ In a shared control, the state program teams can consider these guidelines and m
 
 ### **Operational Recommendations**
 
-DIGIT strongly recommends [Site reliability engineering](https://medium.com/@alexbmeng/site-reliability-engineering-principals-fd52229bfcd6) \(SRE\) principles as a key means to bridge gaps between development and operations by applying a software engineering mindset to system and IT administration topics.  In general, an SRE team is responsible for availability, latency, performance, efficiency, change management, monitoring, emergency response, and capacity planning. 
+DIGIT strongly recommends [DevOps](../devops-general/devops-building-blocks.md) and [Site reliability engineering](https://medium.com/@alexbmeng/site-reliability-engineering-principals-fd52229bfcd6) \(SRE\) principles as a key means to bridge gaps between development and operations by applying a software engineering mindset to system and IT administration topics.  In general, an SRE team is responsible for availability, latency, performance, efficiency, change management, monitoring, emergency response, and capacity planning. 
 
 ### **Monitoring Tools Recommendations**
 
