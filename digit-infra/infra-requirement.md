@@ -1,4 +1,8 @@
-# Infra Requirement
+---
+description: Requirement and estimation
+---
+
+# Infra
 
 DIGIT being a microservice based and cloud native application, it can be deployed anywhere -  be it a public cloud or private cloud like SDC or NIC. The Infra requirement to deploy DIGIT is abstracted as [Kubernetes](../devops-general/the-rise-of-kubernetes/), It allows to plan, standardize the deployment and orchestration for any infra type. Essentially you can create kubernetes cluster from any infra type like on-premise, bare metal, physical machines, etc. It provides flexibility for running cloud-native applications anywhere like physical or virtual infrastructure or hypervisor or HCI and so on. Kubernetes handles the work of scheduling containerized services onto a compute cluster and manages the workloads to ensure they run as intended. And it substantially simplifies the deployment and management of microservices. 
 
