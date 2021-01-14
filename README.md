@@ -1,5 +1,7 @@
 ---
-description: To explain DIGIT DevOps with an example of tools and practices.
+description: >-
+  To give an overview of the DIGIT Infra and DevOps with an example of tools and
+  practices.
 ---
 
 # Intent of the Blog
