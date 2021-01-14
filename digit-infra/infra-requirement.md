@@ -2,7 +2,7 @@
 description: Requirement and estimation
 ---
 
-# Infra
+# Infra Overview
 
 DIGIT being a microservice based and cloud native application, it can be deployed anywhere -  be it a public cloud or private cloud like SDC or NIC. The Infra requirement to deploy DIGIT is abstracted as [Kubernetes](../devops-general/the-rise-of-kubernetes/), It allows to plan, standardize the deployment and orchestration for any infra type. Essentially you can create kubernetes cluster from any infra type like on-premise, bare metal, physical machines, etc. It provides flexibility for running cloud-native applications anywhere like physical or virtual infrastructure or hypervisor or HCI and so on. Kubernetes handles the work of scheduling containerized services onto a compute cluster and manages the workloads to ensure they run as intended. And it substantially simplifies the deployment and management of microservices. 
 
@@ -14,7 +14,9 @@ Provisioning the kubernetes cluster will vary across from [commercial clouds](ht
 
 In case of managed kubernetes service availability you can directly subscribe to it and get started with the kubernetes cluster instantaneously. Just the worker nodes capacity to be estimated based on the number applications and anticipated load. [Refer here to provision infra on public cloud.](../devops-general/the-rise-of-kubernetes/setup-kubernetes/on-cloud.md)
 
-In the absence of the kubernetes as a managed service, one needs to provision the kubernetes cluster from the available base infra.  [Refer this to provision kubernetes cluster on private cloud where managed kubernetes cluster is not available](../devops-general/the-rise-of-kubernetes/setup-kubernetes/on-premise-1/).   
+In the absence of the kubernetes as a managed service, one needs to provision the kubernetes cluster from the available base infra.  [Refer this to provision kubernetes cluster on private cloud where managed kubernetes cluster is not available](../devops-general/the-rise-of-kubernetes/setup-kubernetes/on-premise-1/).  
+
+**Infra Requirement** 
 
 To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernetes cluster components and worker nodes \(VMs\) for the application workload that'll be deployed. 
 
