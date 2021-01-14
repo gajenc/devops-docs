@@ -39,7 +39,7 @@
 
 ## DIGIT - DevOps
 
-* [DIGIT DevOps Practice](digit-devops/digit-devops-practice.md)
+* [DIGIT DevOps overview](digit-devops/digit-devops-practice.md)
 * [1. DIGIT Architecture](digit-devops/1.-digit-architecture.md)
 * [2. GitRepos - Branching](digit-devops/2.-gitrepos-branching.md)
 * [3. Infra setup - Terraform](digit-devops/3.-infra-setup-terraform.md)

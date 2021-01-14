@@ -1,4 +1,4 @@
-# DIGIT DevOps Practice
+# DIGIT DevOps overview
 
 Let's talk about an end-to-end example of the DevOps practice in product/platform [**DIGIT**](https://docs.digit.org/digit-overview), which is built as a open source and a microservices platform come product, that is built for a scale and cloud/Infra agnostic, that means it can be run any cloud/on-premise data centers, etc. DIGIT in its entire architecture and technology, uses completely free and open source tools to stand out as a completely free Open source platform. 
 
