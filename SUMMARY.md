@@ -35,6 +35,7 @@
 * [Public Cloud vs SDC \(Private\)](digit-infra/public-cloud-vs-sdc-private.md)
 * [Infra Recommendation](digit-infra/infra-recommendation.md)
 * [Infra Security](digit-infra/infra-security.md)
+* [Operational Excellence](digit-infra/operational-excellence.md)
 
 ## DIGIT - DevOps
 
