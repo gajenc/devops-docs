@@ -2,11 +2,13 @@
 description: Requirement and estimation
 ---
 
-# Infra Overview
+# Infra Requirement
 
-DIGIT being a microservice based and cloud native application, it can be deployed anywhere -  be it a public cloud or private cloud like SDC or NIC. The Infra requirement to deploy DIGIT is abstracted as [Kubernetes](../devops-general/the-rise-of-kubernetes/), It allows to plan, standardize the deployment and orchestration for any infra type. Essentially you can create kubernetes cluster from any infra type like on-premise, bare metal, physical machines, etc. It provides flexibility for running cloud-native applications anywhere like physical or virtual infrastructure or hypervisor or HCI and so on. Kubernetes handles the work of scheduling containerized services onto a compute cluster and manages the workloads to ensure they run as intended. And it substantially simplifies the deployment and management of microservices. 
+## Overview
 
-Provisioning the kubernetes cluster will vary across from [commercial clouds](https://docs.google.com/spreadsheets/d/1RPpyDOLFmcgxMCpABDzrsBYWpPYCIBuvAoUQLwOGoQw/edit#gid=907731238) to state data centers, especially in the absence of [managed kubernetes services](https://medium.com/swlh/state-of-managed-kubernetes-2020-4be006643360) like AWS, Azure, GCP and NIC. Kubernetes clusters can also be provisioned on SDCs with bare-metal, virtual machines, hypervisors, HCI, etc. However providing integrated networking, monitoring, logging, and alerting is critical for operating Kubernetes Clusters when it comes to State data centers. DIGIT Platform also offers addons to monitor kubernetes cluster performance, logging, tracing, service monitoring and alerting, where the implementation team can take advantage.
+DIGIT is a microservice based and cloud native application, it can be deployed anywhere -  be it on a public cloud or on private cloud like SDC or NIC. The Infra requirement to deploy DIGIT is standardized and abstracted to [Kubernetes](../devops-general/the-rise-of-kubernetes/) platform which allows to plan, standardize, deploy and orchestrate on any infra type seamlessly. 
+
+Essentially one just need to create kubernetes cluster on any available infra like on-premise, bare metal, physical machines, etc. Provisioning the kubernetes cluster will vary across from [commercial clouds](https://docs.google.com/spreadsheets/d/1RPpyDOLFmcgxMCpABDzrsBYWpPYCIBuvAoUQLwOGoQw/edit#gid=907731238) to state data centers, especially in the absence of [managed kubernetes services](https://medium.com/swlh/state-of-managed-kubernetes-2020-4be006643360) like AWS, Azure, GCP and NIC. Kubernetes clusters can also be provisioned on SDCs with bare-metal, virtual machines, hypervisors, HCI, etc. However providing integrated networking, monitoring, logging, and alerting is critical for operating Kubernetes Clusters when it comes to State data centers. DIGIT Platform also offers addons to monitor kubernetes cluster performance, logging, tracing, service monitoring and alerting, where the implementation team can take advantage.
 
 **Public Clouds:** All the public clouds like AWS, Azure, GCP, etc.. will have the kubernetes as completely managed services with full fledged elasticity, secured, optimized, pay-as-u-go, instantaneous, cost-effective ways to provision a kubernetes cluster.  
 
@@ -35,19 +37,18 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>User Accounts/Envs</b>
+      <td style="text-align:left"><b>Envs</b>
       </td>
-      <td style="text-align:left"><b>Dev, UAT and Prod </b>
+      <td style="text-align:left">Dev, UAT and Prod<b> </b>
       </td>
       <td style="text-align:left"><b>3 </b>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>VPN/User Roles</b>
+      <td style="text-align:left"><b>VPN/Cluster Roles</b>
       </td>
-      <td style="text-align:left"><b>Admin, Deploy, ReadOnly</b>
-      </td>
+      <td style="text-align:left">Admin, Deploy, ReadOnly</td>
       <td style="text-align:left"><b>3</b>
       </td>
       <td style="text-align:left"></td>
@@ -55,20 +56,24 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
     <tr>
       <td style="text-align:left"><b>OS</b>
       </td>
-      <td style="text-align:left"><b>Any Linux (preferably Ubuntu/RHEL)</b>
-      </td>
+      <td style="text-align:left">Any Linux (preferably Ubuntu/RHEL)</td>
       <td style="text-align:left"><b>All</b>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>Kubernetes as a managed service or VMs to provision Kubernetes</b>
+      <td style="text-align:left"><b>VM Spec</b>
+      </td>
+      <td style="text-align:left">root, SSH with Internet enabled</td>
+      <td style="text-align:left">All the VMs</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Kubernetes as a managed service (or) VMs to provision own Kubernetes</b>
       </td>
       <td style="text-align:left">
-        <p><b>Managed Kubernetes service with HA/DRS</b>
-        </p>
-        <p><b>(Or) VMs with 2 vCore, 4 GB RAM, 20 GB Disk</b>
-        </p>
+        <p>Managed Kubernetes service with HA/DRS</p>
+        <p>(Or) VMs with 2 vCore, 4 GB RAM, 20 GB Disk</p>
       </td>
       <td style="text-align:left">
         <p><b>If no managed k8s</b>
@@ -86,10 +91,9 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>Kubernetes worker nodes or VMs to provision Kube worker nodes.</b>
+      <td style="text-align:left"><b>Kubernetes worker nodes (or) VMs to provision Kube worker nodes.</b>
       </td>
-      <td style="text-align:left"><b>VMs with 4 vCore, 16 GB RAM, 20 GB Disk / per env</b>
-      </td>
+      <td style="text-align:left">VMs with 4 vCore, 16 GB RAM, 20 GB Disk / per env</td>
       <td style="text-align:left"><b>3-5 VMs/env </b>
       </td>
       <td style="text-align:left">
@@ -102,10 +106,9 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>Disk Storage (NFS/iSCSI) </b>
+      <td style="text-align:left"><b>Disk Storage (SAN/NFS/NAS/iSCSI) </b>
       </td>
-      <td style="text-align:left"><b>Storage with backup, snapshot, dynamic inc/dec</b>
-      </td>
+      <td style="text-align:left">Storage with backup, snapshot, dynamic inc/dec</td>
       <td style="text-align:left"><b>1 TB/env</b>
       </td>
       <td style="text-align:left">
@@ -120,8 +123,7 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
     <tr>
       <td style="text-align:left"><b>VM Instance IOPS</b>
       </td>
-      <td style="text-align:left"><b>Max throughput 1750 MB/s</b>
-      </td>
+      <td style="text-align:left">Max throughput 1750 MB/s</td>
       <td style="text-align:left"><b>1750 MS/s</b>
       </td>
       <td style="text-align:left"></td>
@@ -129,8 +131,7 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
     <tr>
       <td style="text-align:left"><b>Disk IOPS</b>
       </td>
-      <td style="text-align:left"><b>Max throughput 1000 MB/s</b>
-      </td>
+      <td style="text-align:left">Max throughput 1000 MB/s</td>
       <td style="text-align:left"><b>1000 MB/s</b>
       </td>
       <td style="text-align:left"></td>
@@ -138,16 +139,14 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
     <tr>
       <td style="text-align:left"><b>Internet Speed</b>
       </td>
-      <td style="text-align:left"><b>Min 100 MB - 1000MB/Sec (dedicated bandwidth)</b>
-      </td>
+      <td style="text-align:left">Min 100 MB - 1000MB/Sec (dedicated bandwidth)</td>
       <td style="text-align:left"></td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left"><b>Public IP/NAT or LB</b>
       </td>
-      <td style="text-align:left"><b>Internet-facing 1 public ip per env</b>
-      </td>
+      <td style="text-align:left">Internet-facing 1 public ip per env</td>
       <td style="text-align:left"><b>3</b>
       </td>
       <td style="text-align:left"><b>3 Ips</b>
@@ -156,8 +155,7 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
     <tr>
       <td style="text-align:left"><b>Availability Region</b>
       </td>
-      <td style="text-align:left"><b>VMs from the different region is preferable for the DRS/HA</b>
-      </td>
+      <td style="text-align:left">VMs from the different region is preferable for the DRS/HA</td>
       <td style="text-align:left"><b>at least 2 Regions</b>
       </td>
       <td style="text-align:left"></td>
@@ -165,8 +163,7 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
     <tr>
       <td style="text-align:left"><b>Private vLan</b>
       </td>
-      <td style="text-align:left"><b>Per env all VMs should within private vLan/VPC</b>
-      </td>
+      <td style="text-align:left">Per env all VMs should within private vLan/VPC</td>
       <td style="text-align:left"><b>3</b>
       </td>
       <td style="text-align:left"></td>
@@ -174,8 +171,7 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
     <tr>
       <td style="text-align:left"><b>Gateways</b>
       </td>
-      <td style="text-align:left"><b>NAT Gateway, Internet Gateway, Payment and SMS gateway</b>
-      </td>
+      <td style="text-align:left">NAT Gateway, Internet Gateway, Payment and SMS gateway</td>
       <td style="text-align:left"><b>1 per env</b>
       </td>
       <td style="text-align:left"></td>
@@ -183,8 +179,7 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
     <tr>
       <td style="text-align:left"><b>Firewall</b>
       </td>
-      <td style="text-align:left"><b>Ability to configure Inbound, Outbound ports/rules </b>
-      </td>
+      <td style="text-align:left">Ability to configure Inbound, Outbound ports/rules</td>
       <td style="text-align:left"></td>
       <td style="text-align:left"></td>
     </tr>
@@ -196,10 +191,8 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
         </p>
       </td>
       <td style="text-align:left">
-        <p><b>Postgres 12 above Managed DB with backup, snapshot, logging. </b>
-        </p>
-        <p><b>(Or) 1 VM with 4 vCore, 16 GB RAM, 100 GB Disk per env.</b>
-        </p>
+        <p>Postgres 12 above Managed DB with backup, snapshot, logging.</p>
+        <p>(Or) 1 VM with 4 vCore, 16 GB RAM, 100 GB Disk per env.</p>
       </td>
       <td style="text-align:left"><b>per env</b>
       </td>
@@ -216,10 +209,8 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
       <td style="text-align:left"><b>CI/CD server self hosted (or) Managed DevOps</b>
       </td>
       <td style="text-align:left">
-        <p><b>Self Hosted Jenkins : Master, Slave (VM 4vCore, 8 GB each) </b>
-        </p>
-        <p><b>(Or) Managed CI/CD:  NIC DevOps or AWS  CodeDeploy or Azure DevOps </b>
-        </p>
+        <p>Self Hosted Jenkins : Master, Slave (VM 4vCore, 8 GB each)</p>
+        <p>(Or) Managed CI/CD: NIC DevOps or AWS CodeDeploy or Azure DevOps</p>
       </td>
       <td style="text-align:left"><b>2 VMs (Master, Slave)</b>
       </td>
@@ -228,8 +219,7 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
     <tr>
       <td style="text-align:left"><b>Nexus Repo</b>
       </td>
-      <td style="text-align:left"><b>Self hosted Artifactory Repo (Or) NIC Nexus Artifactory</b>
-      </td>
+      <td style="text-align:left">Self hosted Artifactory Repo (Or) NIC Nexus Artifactory</td>
       <td style="text-align:left"><b>1</b>
       </td>
       <td style="text-align:left"></td>
@@ -237,8 +227,7 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
     <tr>
       <td style="text-align:left"><b>DockerRegistry</b>
       </td>
-      <td style="text-align:left"><b>DockerHub (Or) SelfHosted private docker reg</b>
-      </td>
+      <td style="text-align:left">DockerHub (Or) SelfHosted private docker reg</td>
       <td style="text-align:left"><b>1</b>
       </td>
       <td style="text-align:left"></td>
@@ -246,8 +235,7 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
     <tr>
       <td style="text-align:left"><b>Git/SCM</b>
       </td>
-      <td style="text-align:left"><b>GitHub (Or) Any Source Control tool</b>
-      </td>
+      <td style="text-align:left">GitHub (Or) Any Source Control tool</td>
       <td style="text-align:left"><b>1</b>
       </td>
       <td style="text-align:left"></td>
@@ -255,8 +243,7 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
     <tr>
       <td style="text-align:left"><b>DNS </b>
       </td>
-      <td style="text-align:left"><b>main domain &amp; ability to add more sub-domain</b>
-      </td>
+      <td style="text-align:left">main domain &amp; ability to add more sub-domain</td>
       <td style="text-align:left"><b>1</b>
       </td>
       <td style="text-align:left"></td>
@@ -264,8 +251,7 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
     <tr>
       <td style="text-align:left"><b>SSL Certificate</b>
       </td>
-      <td style="text-align:left"><b>NIC managed (Or) SDC managed SSL certificate per URL</b>
-      </td>
+      <td style="text-align:left">NIC managed (Or) SDC managed SSL certificate per URL</td>
       <td style="text-align:left"><b>2 urls per env</b>
       </td>
       <td style="text-align:left"></td>
