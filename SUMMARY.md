@@ -38,7 +38,7 @@
 * [Security Recommendations](digit-infra/infra-security.md)
 * [Operational Recommendations](digit-infra/operational-excellence.md)
 
-## DIGIT - DevOps
+## DIGIT - DevOps Videos <a id="digit-devops"></a>
 
 * [DIGIT DevOps overview](digit-devops/digit-devops-practice.md)
 * [1. DIGIT Architecture](digit-devops/1.-digit-architecture.md)
