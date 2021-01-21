@@ -4,7 +4,7 @@ description: DIGIT Infra Guidelines for Operational Excellence
 
 # Operational Recommendations
 
-While DIGIT is deployed on SDC, NIC or any commercial clouds along with the recommendations and [segregation of duties \(SoD\)](https://medium.com/@jeehad.jebeile/devops-and-segregation-of-duties-9c1a1bea022e). It helps to plan the procurement and build the necessary capabilities to deploy and implement DIGIT.
+While DIGIT is deployed on SDC, NIC or any commercial it is essential to consider some of the operational recommendations and [segregation of duties \(SoD\)](https://medium.com/@jeehad.jebeile/devops-and-segregation-of-duties-9c1a1bea022e). It helps to plan the procurement and build the necessary capabilities to deploy, implement and maintain DIGIT.
 
 In a shared control, the state program teams can consider these guidelines and must provide their own control implementation to the state’s cloud infrastructure and partners for a standard and smooth operational excellence.
 
