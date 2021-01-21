@@ -31,9 +31,9 @@
 
 ## DIGIT - Infra
 
-* [Infra Requirement](digit-infra/infra-requirement.md)
 * [Public Cloud vs SDC \(Private\)](digit-infra/public-cloud-vs-sdc-private.md)
 * [Infra Recommendation](digit-infra/infra-recommendation.md)
+* [Infra Requirement](digit-infra/infra-requirement.md)
 * [Infra Estimation](digit-infra/infra-estimation.md)
 * [Security Recommendations](digit-infra/infra-security.md)
 * [Operational Recommendations](digit-infra/operational-excellence.md)

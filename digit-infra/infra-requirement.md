@@ -6,9 +6,7 @@ description: Requirement and estimation
 
 ## Overview
 
-DIGIT is a microservice based and cloud native application, it can be deployed anywhere -  be it on a public cloud or on private cloud like SDC or NIC. The Infra requirement to deploy DIGIT is standardized and abstracted to [Kubernetes](../devops-general/the-rise-of-kubernetes/) platform which allows to plan, standardize, deploy and orchestrate on any infra type seamlessly. 
-
-Essentially one just need to create kubernetes cluster on any available infra like on-premise, bare metal, physical machines, etc. Provisioning the kubernetes cluster will vary across from [commercial clouds](https://docs.google.com/spreadsheets/d/1RPpyDOLFmcgxMCpABDzrsBYWpPYCIBuvAoUQLwOGoQw/edit#gid=907731238) to state data centers, especially in the absence of [managed kubernetes services](https://medium.com/swlh/state-of-managed-kubernetes-2020-4be006643360) like AWS, Azure, GCP and NIC. Kubernetes clusters can also be provisioned on SDCs with bare-metal, virtual machines, hypervisors, HCI, etc. However providing integrated networking, monitoring, logging, and alerting is critical for operating Kubernetes Clusters when it comes to State data centers. DIGIT Platform also offers addons to monitor kubernetes cluster performance, logging, tracing, service monitoring and alerting, where the implementation team can take advantage.
+While DIGIT is a microservice based and cloud native platform/application, it can literally be deployed anywhere based on this [recommendations](infra-recommendation.md). 
 
 **Public Clouds:** All the public clouds like AWS, Azure, GCP, etc.. will have the kubernetes as completely managed services with full fledged elasticity, secured, optimized, pay-as-u-go, instantaneous, cost-effective ways to provision a kubernetes cluster.  
 
@@ -18,7 +16,11 @@ In case of managed kubernetes service availability you can directly subscribe to
 
 In the absence of the kubernetes as a managed service, one needs to provision the kubernetes cluster from the available base infra.  [Refer this to provision kubernetes cluster on private cloud where managed kubernetes cluster is not available](../devops-general/the-rise-of-kubernetes/setup-kubernetes/on-premise-1/).  
 
-**Infra Requirement** 
+### **Infra Requirement** 
+
+**Public Clouds:** All the public clouds like AWS, Azure, GCP, etc.. will have the kubernetes as completely managed services with full fledged elasticity, secured, optimized, pay-as-u-go, instantaneous, cost-effective ways to provision a kubernetes cluster.  
+
+**Private Clouds:** Most of the SDCs and NIC are essentially a private clouds that has got the basic services like VMs, Storage, Network, Load Balancers, Routers, Firewall, etc. These are the infra requirements to create kubernetes cluster as well. Some SDCs might already have kubernetes as a managed service in case of the underlying Infra was either from VMware, IBM, Nutanix, OpenStack, Oracle, etc. Where as some SDCs might have to provision kubernetes as a service from the bare-metal or simple VM infrastructure.
 
 To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernetes cluster components and worker nodes \(VMs\) for the application workload that'll be deployed. 
 
@@ -156,16 +158,15 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
       <td style="text-align:left"><b>Availability Region</b>
       </td>
       <td style="text-align:left">VMs from the different region is preferable for the DRS/HA</td>
-      <td style="text-align:left"><b>at least 2 Regions</b>
+      <td style="text-align:left"><b>1 or 2 Regions</b>
       </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left"><b>Private vLan</b>
       </td>
-      <td style="text-align:left">Per env all VMs should within private vLan/VPC</td>
-      <td style="text-align:left"><b>3</b>
-      </td>
+      <td style="text-align:left">Per env, we recommend all VMs should within private vLan/VPC</td>
+      <td style="text-align:left">1 per env</td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
@@ -191,8 +192,8 @@ To provision a kubernetes cluster you need master nodes \(VMs\) for the kubernet
         </p>
       </td>
       <td style="text-align:left">
-        <p>Postgres 12 above Managed DB with backup, snapshot, logging.</p>
-        <p>(Or) 1 VM with 4 vCore, 16 GB RAM, 100 GB Disk per env.</p>
+        <p>Postgres 12 &amp; above Managed DB with backup, snapshot, logging capabilities.</p>
+        <p>(Or) 1 VM with 4 vCore, 16GB RAM, 100 GB Disk per env.</p>
       </td>
       <td style="text-align:left"><b>per env</b>
       </td>
