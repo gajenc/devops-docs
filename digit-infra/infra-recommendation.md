@@ -6,17 +6,34 @@ description: >-
 
 # Infra Recommendation
 
-DIGIT urges to take advantage of managed kubernetes services like EKS offered by Amazon, AKS offered by Microsoft, GKE offered by GKE and RKE offered by NIC \(GI Cloud\). But it never stops you to create your own kubernetes cluster from any of your available existing infrastructure.
+DIGIT urges to take advantage of managed kubernetes clusters from the commercial clouds like **Amazon**, **Microsoft**, **Google, others** and also **GI Cloud - NIC,** since majority of these cloud providers can offer you an almost-instant, scalable cluster on demand, but there’s a trick or two you can pull while leveraging SDC's architecture. One of the reasons state might want to deploy their own Kubernetes cluster is because states already have some on-prem or collocated bare-metal hardware. Another is the flexibility of state data center architecture. Price also comes to mind if you already own metal in your racks. 
 
-In case of managed services most of the operations are taken care, where as in the manual provisioning apart from managing just the application workload you may have to put additional efforts to maintain your own cluster from the elasticity, HA, DRS point of view.
+Deploying an actual kubernetes cluster is relatively easy and quick; based on how it will fit into your existing infrastructure. Most of the tutorials, books, and blogs around will either presuppose or advise you to create a cluster with some of the major cloud providers — Google, Amazon, Microsoft,etc. But when a state decides to setup kubernetes on state data center leveraging either full virtualization \(HCI, KVM and Hyper-V\) or containerization \(LXC\), a full-gigabit uplink, and a free /25 public IPv4 pool, meaning state can practically provision for whatever demand the Kubernetes cluster should throw at us.
+
+In SDC's case one should consider the practical implications and demands for real-life challenges one might want to convert to Kubernetes architecture. As important as deciding what makes sense to containerize is deciding what not to containerize — and how to make it play nice in SDCs hybrid landscape.
+
+These are the major requirement we should consider:
+
+* network topology and connectivity
+* compute resources
+* storage technology
+* non-volatile services
+* Elasticity
+* HA/DRS
+* Speed
+* Monitoring/Alerting
+* Data backups/recovery
+* Operations/SLA/Turnaround time
+
+In case of managed services most of these operations are taken care, where as in the manual provisioning apart from managing just the application workload you may have to put additional efforts to maintain your own cluster considering the above aspects.
 
 ## Hardware Recommendations
 
 ### Master Node VM Estimation <a id="kublr-platform-feature-requirements"></a>
 
-**Dev & UAT Env:** You can have minimal Single master Kubernetes cluster with 4GB memory and 2 CPU. Please note: We do not recommend using this configuration in production but this configuration is suitable to start exploring the DIGIT Platform.
+**Dev & UAT Envs:** You can have minimal Single master Kubernetes cluster with **4GB** memory and **2 vCPU**. Please note: We do not recommend using this configuration in production but this configuration is suitable to start exploring the DIGIT Platform.
 
-**Prod Env:** For a production workload, run the cluster on HA, DRS mode, so run the kubernetes cluster on 3 master nodes. 4 x 3 GB memory and 2 x3 CPU.
+**Prod Env:** For a production workload, run the cluster on HA, DRS mode, so run the kubernetes cluster on **3 master nodes quorum**. Which is **3 x 4 GB** memory and **3 x 2 vCPU**.
 
 | Specification | Required CPU | Required memory |
 | :--- | :--- | :--- |
@@ -24,6 +41,10 @@ In case of managed services most of the operations are taken care, where as in t
 | **Production Master Node** | 2x3 vCPUs | 4x3 GB |
 
 ### Worker Node VM Estimation <a id="kublr-platform-feature-requirements"></a>
+
+Though there are Master nodes, we recommend you only use them only for managing the kubernetes cluster components, to schedule the actual application workloads you need to provision the Worker nodes depending upon the number of services/modules that you are going to implement and you can always add more worker nodes as you increase the capacity incrementally. 
+
+Since DIGIT as a platform has many services like core/infra which also varies based on the municipal services that a state want to implement either phase-by-phase or ulb-after-ulb. So the hardware requirement for the worker nodes will vary based on the modules that state want to implement and also the env type like Dev, UAT and PROD. Below is the high level estimation on how it would vary between the range, however you can arrive at the estimation specific to a states need based on the similar [estimation details](infra-estimation.md) mentioned.
 
 | DIGIT Platform/Feature | Required CPU | Required memory |
 | :--- | :--- | :--- |
@@ -41,144 +62,6 @@ In case of managed services most of the operations are taken care, where as in t
 | Google Cloud Platform | n1-standard-2 \(2 vCPU, 7.5GB\) | 3 × n1-standard-4 \(4 vCPU, 15GB\) |
 | Microsoft Azure | A2 v2 \(2 vCPU, 4GB\) | 3 × A8 v2 \(8 vCPU, 16GB\) |
 | On-Premises | 2 vCPU, 5GB | 3 × VM \(3 vCPU, 16GB\) |
-
-### DIGIT Infra Estimation based on the Modules.
-
-DIGIT has several product features, which could be installed separately on a provisioned Kubernetes clusters. Calculating Needed CPU, Memory and Disk for Business modules as per the below details.
-
-{% tabs %}
-{% tab title="Overall Modules" %}
-| **Service Category** | **Product Services \(v2.0\)** |
-| :--- | :--- |
-| **Backbone** |  |
-|  | Redis |
-|  | Zookeeper |
-|  | nginx-ingress |
-|  | cert-manager |
-|  | ES-DATA-Infra \(Add-on\) |
-|  | ES-MASTER-Infra \(Add-on\) |
-|  | ES-DATA |
-|  | ES-MASTER |
-|  | Kafka |
-|  | Kafka-Infra \(Addon\) |
-|  | PostGres DB |
-| **Infra**  |  |
-|  | Jaeger \(Addon\) |
-|  | Kibana-Infra \(Addon\) |
-|  | Kibana-Product |
-|  | minio |
-|  | Grafana |
-|  | Alert manager |
-|  | Prometheus |
-|  | WordPress Portal |
-| Core |  |
-|  | egov-enc-service |
-|  | egov-searcher |
-|  | egov-pg-service |
-|  | egov-filestore |
-|  | zuul |
-|  | egov-notification-mail |
-|  | egov-notification-sms |
-|  | egov-localization |
-|  | egov-persister |
-|  | egov-idgen |
-|  | egov-user |
-|  | egov-mdms-service |
-|  | egov-url-shortening |
-|  | egov-indexer |
-|  | report |
-|  | egov-workflow-v2 |
-|  | egov-user-event |
-|  | pdf-service |
-|  | egov-pdf |
-|  | chatbot |
-|  | egov-accesscontrol |
-|  | egov-location |
-|  | egov-otp |
-|  | egov-custom-consumer |
-|  | user-otp |
-| **Business** |  |
-|  | egov-apportion-service |
-|  | collection-services |
-|  | billing-service |
-|  | egov-hrms |
-|  | dashboard-analytics |
-|  | dashboard-ingest |
-|  | egf-instrument |
-|  | egf-master |
-|  | finance-collections-voucher-consumer |
-| **Municipal** |  |
-|  | tl-services |
-|  | tl-calculator |
-|  | firenoc-services |
-|  | firenoc-calculator |
-|  | rainmaker-pgr |
-|  | property-services |
-|  | pt-calculator-v2 |
-|  | pt-services-v2 |
-|  | ws-services |
-|  | ws-calculator |
-|  | sw-services |
-|  | sw-calculator |
-|  | bpa-calculator |
-|  | bpa-services |
-|  | land-services |
-| **Containerized** |  |
-|  | FINANCE - Containerized |
-|  | egov-edcr - Containerized |
-| **Frontend** |  |
-|  | dss-dashboard |
-|  | Trade License |
-|  | Bill Genie |
-|  | Universal Collections |
-|  | PGR |
-|  | FIRENOC |
-|  | mSeva |
-|  | Property Tax |
-|  | HRMS |
-|  | W&S |
-|  | BPA |
-|  | Employee App |
-|  | Citizen App |
-{% endtab %}
-
-{% tab title="H/W Estimation" %}
-
-
-| **CPU CALCULATION** | **Category** | **No of Services** | **MIN \(vCores\)** |
-| :--- | :--- | :--- | :--- |
-| @0.2 core/per service | Backbone Services | 27 | 5.4 |
-| @0.1 core/per service | Infra Services | 7 | 0.7 |
-| @0.1 core/per service | Core Services | 27 | 2.7 |
-| @0.1 core/per service | Business Services | 7 | 0.7 |
-| @0.2 core/per service | Municipal Services | 15 | 5.5 |
-| @2 core/Per service | Containerized | 2 | 4 |
-| @0.1 core/per service | Frontend | 12 | 1.2 |
-|  | **TOTAL** | **97** | **20** |
-
-| **RAM CALCULATION** | **Category** | **No of Services** | **MIN \(GB\)** |
-| :--- | :--- | :--- | :--- |
-| @512mb/per service | Backbone Services | 27 | 13.5 |
-| @512mb/per service | Infra Services | 7 | 3.5 |
-| @512mb/per service | Core Services | 27 | 16.2 |
-| @512mb/per service | Business Services | 7 | 3.5 |
-| @512mb/per service | Municipal Services | 15 | 7.5 |
-| @4GB/Per service | Containerized | 2 | 8 |
-| @256mb/per service | Frontend | 12 | 3 |
-|  | **TOTAL** | **97** | **55** |
-
-| DISK CALCULATION | Category | **No of Services** | MIN |
-| :--- | :--- | :--- | :--- |
-| @50GB/Statefulset | Backbone Services | 27 | 1350 |
-|  | Infra Services | 7 | 0 |
-|  | Core Services | 27 | 0 |
-|  | Business Services | 7 | 0 |
-| @50GB/Services | Municipal Services | 15 | 750 |
-| @100GB Filestore | Containerized | 2 | 200 |
-|  | Frontend | 12 | 0 |
-|  | **TOTAL** | **97** | **2300** |
-{% endtab %}
-{% endtabs %}
 
 
 
