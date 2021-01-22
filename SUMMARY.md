@@ -37,6 +37,7 @@
 * [Infra Estimation](digit-infra/infra-estimation.md)
 * [Security Recommendations](digit-infra/infra-security.md)
 * [Operational Recommendations](digit-infra/operational-excellence.md)
+* [Partner Relationship Policy](digit-infra/partner-relationship-policy.md)
 
 ## DIGIT - DevOps Videos <a id="digit-devops"></a>
 
