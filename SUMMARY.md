@@ -38,6 +38,7 @@
 * [Security Recommendations](digit-infra/infra-security.md)
 * [Operational Recommendations](digit-infra/operational-excellence.md)
 * [Partner Relationship Policy](digit-infra/partner-relationship-policy.md)
+* [DIGIT as Central Instance](digit-infra/digit-as-central-instance.md)
 
 ## DIGIT - DevOps Videos <a id="digit-devops"></a>
 
