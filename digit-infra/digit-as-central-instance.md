@@ -28,7 +28,7 @@ Multi-tenancy in DIGIT is sharing the DIGIT central infra resources among multip
 
 Hard multi-tenancy assumes tenants to be malicious and therefore advocates zero trust between them. Tenant resources are isolated and access to other tenant’s resources is not allowed. Clusters are configured in a way that isolate tenant resources and prevent access to other tenant’s resources.
 
-### Kubernetes Multi-tenancy Best Practices
+### Multi-tenancy Best Practices and Key Considerations
 
 ![](../.gitbook/assets/image%20%2814%29.png)
 
