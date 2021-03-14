@@ -1,40 +1,80 @@
 ---
-description: A multi tenanted instance approach
+description: A multi tenanted DIGIT instance
 ---
 
 # DIGIT as Central Instance
 
-Multi tenancy is a key topic when it comes to host DIGIT as a central Instance. We experienced this increased interest first hand at CDG. 
+DIGIT being a distributed system, hosting the DIGIT services as a Central SaaS Instance is surely an option and scaling the all/specific services/workloads depending on each state's needs/requirements. To achieve the same **Multi tenancy** is a key topic. We experienced this increased interest first hand at CDG. This interest is further curated by the results of the most respondents who indicated the use of a central instance simplifies the infra/operation for individual states or Small states with a deep isolation of access, services and resources. The emphasis on a central instance are the security, privacy and independant customization/configs which is an obvious challenge that DIGIT as a platform to address.
 
-Multi-tenancy is a hard nut to crack in the context of SDC, NIC and Commercial Cloud Infra. This is supported by the results of a survey where 74% of respondents indicated the use of separate instance for individual states. One reason for this are the security and resource isolation challenges that come with multi-tenant central Instance.
+Multi-tenancy is a hard nut to crack in the context of Infra depending on whether it is NIC or Commercial Cloud Infra. Comparatively, comercial clouds provide number of services that can simplify the process of isolating the infra resources using VPCs, Security groups, Encryptions, RBACs, operations, monitoring etc.
 
-In this article we will briefly review the concepts of tenants and multi-tenancy, identify the challenges that have to be overcome and outline best practices for Isolated development, customization, Deployments, DevOps and infra/operations admins operating multi-tenant Kubernetes clusters.
+In this article we will briefly review the concepts of tenants and multi-tenancy in the context of DIGIT Central Instance, identify the challenges that have to be overcome and outline best practices for Isolated development, customization, Deployments, DevOps and infra/operations admins operating multi-tenant Kubernetes clusters.
 
-### What is a Tenant?
+![](../.gitbook/assets/image%20%2825%29.png)
 
-The tenant defined as representing a groups of users from either a distributed teams, states, applications, departments or projects. In any of these case users that will have access to only a subset of DIGIT services hosted central instance, and the subset of the services might vary from a usergroup-to-usergroup depending upon the opted DIGIT municipal services. 
+### Who are Tenants in DIGIT Central Instance?
 
-This phenomenon of subsetting the services to a tenant also impacts the infra resources \(compute, storage, networking, control plane and API resources\) as well as resource limits and quotas for the use of those resources. Resource limits and quotas lay out tenant boundaries. These boundaries extend to the control plane allowing for grouping of the resources owned by the tenant, limited access or visibility to resources outside of the control plane domain and tenant authentication.
+The tenant defined as representing a groups of users who could be from either of a state, ULBs, applications, distributed teams, partners/system integrators, departments or projects. In any of these cases users that will have access to only a subset/intended DIGIT services on a centrally hosted instance, and the services might vary from a usergroup-to-usergroup depending upon the opted DIGIT municipal services. 
 
-### What is multi-tenancy in Kubernetes?
+The phenomenon of subsetting/Isolating the services from the central instance to a specific tenant also impacts the infra resources \(compute, storage, networking, control plane and API resources\) as well as resource limits and quotas for the use of those resources. Resource limits and quotas lay out tenant boundaries. These boundaries extend to the control plane allowing for grouping of the resources owned by the tenant, limited access or visibility to resources outside of the control plane domain and tenant authentication.
 
-Multi-tenant Kubernetes clusters are one’s that share infra resources of the central instance among tenants. Based on the definition provided earlier, tenants can be anything from groups of users to distributed teams, states, applications, departments or projects. Examples include multiple distributed DevOps teams deploying applications to the same cluster, staging and production environments residing on the same cluster, Kubernetes clusters being shared among multiple end-users or customers and multiple applications or workloads sharing a cluster’s resources.
+![](../.gitbook/assets/image%20%2816%29.png)
 
-There are two multi-tenancy models in Kubernetes: Soft and Hard multi-tenancy.
+### What is multi-tenancy in DIGIT Infra?
 
-#### Soft Multi-tenancy
-
-[Soft multi-tenancy](https://static.sched.com/hosted_files/kccnceu19/ed/2019%20Kubecon%20EU%20-%20Multitenancy%20WG%20Intro.pdf) trusts tenants to be good actors and assumes them to be non-malicious. Soft multi-tenancy is focused on minimising accidents and managing the fallout if they do.
+Multi-tenancy in DIGIT is sharing the DIGIT central infra resources among multiple individual tenants. Based on the definition provided earlier, tenants can be anything from groups of users. Examples include the core DIGIT platform services maintained centrally and multiple distributed state teams deploying customizations/configs to the DIGIT Central Instances, like Dev, staging and production environments residing on the same Infra and workloads are shared leveraging the central instance's infra resources.
 
 #### Hard Multi-tenancy
 
-[Hard multi-tenancy](https://static.sched.com/hosted_files/kccnceu19/ed/2019%20Kubecon%20EU%20-%20Multitenancy%20WG%20Intro.pdf) assumes tenants to be malicious and therefore advocates zero trust between them. Tenant resources are isolated and access to other tenant’s resources is not allowed. Clusters are configured in a way that isolate tenant resources and prevent access to other tenant’s resources.
+Hard multi-tenancy assumes tenants to be malicious and therefore advocates zero trust between them. Tenant resources are isolated and access to other tenant’s resources is not allowed. Clusters are configured in a way that isolate tenant resources and prevent access to other tenant’s resources.
 
 ### Kubernetes Multi-tenancy Best Practices
 
-Let’s move on now to multi-tenancy best practices in the context of Kubernetes. In the section below we will outline best practices for DevOps and cluster administrators operating multi-tenant Kubernetes clusters.
+![](../.gitbook/assets/image%20%2814%29.png)
+
+DIGIT Infra is abstracted to kubernetes, Let’s move on now to multi-tenancy practices in the context of Kubernetes. In the section below we will outline best practices for DevOps \(Source Code, Deployment, Configs and cluster administrators\) operating multi-tenant Kubernetes clusters.
+
+![](../.gitbook/assets/image%20%2829%29.png)
+
+![](../.gitbook/assets/image%20%2823%29.png)
+
+![](../.gitbook/assets/image%20%2830%29.png)
+
+#### 
+
+![](../.gitbook/assets/image%20%2813%29.png)
+
+#### 
+
+![](../.gitbook/assets/image%20%2828%29.png)
+
+![](../.gitbook/assets/image%20%2819%29.png)
+
+
+
+![](../.gitbook/assets/image%20%2817%29.png)
+
+![](../.gitbook/assets/image%20%2820%29.png)
+
+
+
+
+
+
+
+![](../.gitbook/assets/image%20%2824%29.png)
+
+![](../.gitbook/assets/image%20%2821%29.png)
+
+![](../.gitbook/assets/image%20%2827%29.png)
+
+![](../.gitbook/assets/image%20%2826%29.png)
+
+![](../.gitbook/assets/image%20%2812%29.png)
 
 #### Categorize Namespaces
+
+![](../.gitbook/assets/image%20%2818%29.png)
 
 A starter best practice in the context of Kubernetes multi-tenancy is to categorize namespaces into groups. Three such namespace groups are [recommended](https://github.com/kubernetes-sigs/multi-tenancy/blob/master/docs/profiles/profile-soft-multitenancy-s1.md#kubernetes-pod-admission-and-security-policy-definition-for-profile-s1):
 
