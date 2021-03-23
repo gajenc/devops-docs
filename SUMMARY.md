@@ -38,6 +38,9 @@
 * [Security Recommendations](digit-infra/infra-security.md)
 * [Operational Recommendations](digit-infra/operational-excellence.md)
 * [Partner Relationship Policy](digit-infra/partner-relationship-policy.md)
+* [DIGIT - Infra Autoscaling](digit-infra/digit-infra-autoscaling/README.md)
+  * [VPA: Step-by-Step](digit-infra/digit-infra-autoscaling/vpa-step-by-step.md)
+  * [HPA: Step-by-Step](digit-infra/digit-infra-autoscaling/hpa-step-by-step.md)
 * [DIGIT as Central Instance](digit-infra/digit-as-central-instance.md)
 
 ## DIGIT - DevOps Videos <a id="digit-devops"></a>
