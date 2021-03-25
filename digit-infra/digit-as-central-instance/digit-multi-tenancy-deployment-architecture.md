@@ -118,6 +118,23 @@ We can scale the infra based on the dynamic workloads using the custom metrics t
 2. **Vertical Pod Autoscaling \(VPA\)**
 3. **Cluster Autoscaler \(nodes\)**
 
+\*\*\*\*
+
+#### To recap here are the recommended best practices for Multi-tenant cluster:
+
+* Limit Tenant’s use of Shared Resources
+* Enable Built-in Admission Controllers
+* Isolate Tenant Namespaces using Network Policy
+* Enable RBAC
+* Create Cluster Personas
+* Map Kubernetes Namespaces to Tenants
+* Categorize Namespaces
+* Limit Tenant’s Access to non-namespaced Resources
+* Limit Tenant’s Access to Resources from other Tenants
+* Limit Tenant’s Access to Multi-tenancy Resources
+* Prevent use of HostPath Volumes
+* Run Multi-tenancy e-2-e Validation Test
+
 
 
 

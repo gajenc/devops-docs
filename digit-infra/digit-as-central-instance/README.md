@@ -331,18 +331,5 @@ Or with path to config file
 go test ./e2e/tests -config 
 ```
 
-#### To recap here are the recommended best practices for Multi-tenant Kubernetes clusters:
-
-* Limit Tenant’s use of Shared Resources
-* Enable Built-in Admission Controllers
-* Isolate Tenant Namespaces using Network Policy
-* Enable RBAC
-* Create Cluster Personas
-* Map Kubernetes Namespaces to Tenants
-* Categorize Namespaces
-* Limit Tenant’s Access to non-namespaced Resources
-* Limit Tenant’s Access to Resources from other Tenants
-* Limit Tenant’s Access to Multi-tenancy Resources
-* Prevent use of HostPath Volumes
-* Run Multi-tenancy e-2-e Validation Test
+#### 
 
