@@ -11,7 +11,7 @@ Once the desired service is ready for the integration: decide the service name, 
 **Build-config.yml** –It is present under build directory in each repository
 
 ```text
-https://github.com/egovernments/DIGIT/core-services/blob/master/build/build-config.yml
+https://github.com/egovernments/DIGIT/blob/master/core-services/build/build-config.yml
 ```
 
 This file contains the below details which are used for creating the automated Jenkins pipeline job for your newly created service.
