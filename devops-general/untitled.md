@@ -11,7 +11,7 @@ Once the desired service is ready for the integration: decide the service name, 
 **Build-config.yml** –It is present under build directory in each repository
 
 ```text
-https://github.com/egovernments/core-services/blob/master/build/build-config.yml
+https://github.com/egovernments/DIGIT/core-services/blob/master/build/build-config.yml
 ```
 
 This file contains the below details which are used for creating the automated Jenkins pipeline job for your newly created service.
@@ -44,11 +44,11 @@ As a result of the pipeline execution, the respective app/service docker image w
 
 The Jenkins CI pipeline is configured and managed 'as code'.
 
-​[New Service Integration - Example](https://digit-discuss.atlassian.net/wiki/spaces/DOPS/pages/111673399/New+Service+Integration+-+Example) URL - [https://builds.egovernments.org/](https://builds.egovernments.org/)​
+​[New Service Integration - Example](https://digit-discuss.atlassian.net/wiki/spaces/DOPS/pages/111673399/New+Service+Integration+-+Example) URL - [https://builds.digit.org/](%20https://builds.digit.org/​)​
 
-**Job Builder** – Job Builder is a Generic Jenkins job which creates the Jenkins pipeline automatically which are then used to build the application, create the docker image of it and push the image to docker repository. The Job Builder job requires the git repository URL as a parameter. It clones the respective git repository and reads the **build/**[**build-config.yml**](https://github.com/egovernments/core-services/blob/master/build/build-config.yml) file for each git repository and uses it to create the service build job.
+**Job Builder** – Job Builder is a Generic Jenkins job which creates the Jenkins pipeline automatically which are then used to build the application, create the docker image of it and push the image to docker repository. The Job Builder job requires the git repository URL as a parameter. It clones the respective git repository and reads the [**build/build-config.yml**](https://github.com/egovernments/DIGIT/blob/master/core-services/build/build-config.yml) file for each git repository and uses it to create the service build job.
 
-‌**Check git repository URL is available in** [**ci.yaml**](https://github.com/egovernments/eGov-infraOps/blob/master/helm/environments/ci.yaml)​[‌](https://github.com/egovernments/eGov-infraOps/blob/master/helm/environments/ci.yaml)‌
+‌**Check git repository URL is available in** [**ci.yaml**](https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/ci.yaml)​[‌](https://github.com/egovernments/eGov-infraOps/blob/master/helm/environments/ci.yaml)‌
 
 ![](https://gblobscdn.gitbook.com/assets%2F-MERG_iQW5oN4ukgXP8K%2Fsync%2F3b7e0c5ac4c5064192777b45de690069ff11a674.png?alt=media)
 

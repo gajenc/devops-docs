@@ -42,6 +42,7 @@
   * [VPA: Step-by-Step](digit-infra/digit-infra-autoscaling/vpa-step-by-step.md)
   * [HPA: Step-by-Step](digit-infra/digit-infra-autoscaling/hpa-step-by-step.md)
 * [DIGIT as Central Instance](digit-infra/digit-as-central-instance/README.md)
+  * [Untitled](digit-infra/digit-as-central-instance/untitled.md)
   * [DIGIT - Multi-tenancy Deployment Architecture](digit-infra/digit-as-central-instance/digit-multi-tenancy-deployment-architecture.md)
 
 ## DIGIT - DevOps Videos <a id="digit-devops"></a>
