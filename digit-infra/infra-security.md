@@ -8,7 +8,7 @@ Security is a major concern when it comes to government systems and infra. As an
 
 However, it’s quite difficult to avoid, a certain infatuation from different categories of people to try to hack the systems.
 
-## 1. Update to the latest version <a id="1-update-to-the-latest-version"></a>
+## 1. Update to the latest version of the tools <a id="1-update-to-the-latest-version"></a>
 
 There aren’t only bug fixes in each release but also new security measures to require advantage of them, we recommend working with the newest stable version.
 

@@ -8,18 +8,18 @@ Are you a software engineer/developer/coder or maybe even a tech enthusiast who 
 
 In the early 2000's, we witnessed the rise of `Service Oriented Architecture (SOA)`, a popular design paradigm for building software. In simple words, SOA is a software architecture pattern that allows us to construct large-scale enterprise applications that generally require us to integrate multiple services, each of which is made over different platforms and languages through a common communication mechanism.
 
-Here is a simple pictorial representation of the Service Oriented Architecture \(SOA\):
+## 1. Service Oriented Architecture \(SOA\):
 
-![microservices-docker-image-one](https://images.ctfassets.net/h6vh38q7qvzk/2VOExO2cuIoCaMIkuw0WW0/a8ffeeeeb49605c6e92ff75d65e226e1/microservices-docker-image-one.png)
+![Here is a simple pictorial representation of the SOA](https://images.ctfassets.net/h6vh38q7qvzk/2VOExO2cuIoCaMIkuw0WW0/a8ffeeeeb49605c6e92ff75d65e226e1/microservices-docker-image-one.png)
 
-**Key Points**
+### **Key Points**
 
 1. SOA is preferred for large-scale software products such as enterprise applications
 2. SOA focuses on integrating multiple services in a single application rather than emphasizing on modularizing the application
 3. The common communication mechanism used for interaction between various services in an SOA is referred to as [Enterprise Service Bus \(ESB\)](https://en.wikipedia.org/wiki/Enterprise_service_bus)
 4. SOA based applications could be `monolithic` in nature. This means that you have single application layer which contains your user interface or presentation layer, business logic or application layer, and database layer all integrated into a single platform
 
-**Interesting, Tell Me More About "Monolithic Architecture"**
+### **Interesting, Tell Me More About "Monolithic Architecture"**
 
 Let's take a look at a case study: an ecommerce store. We know that multiple devices can access most ecommerce sites, so they have various user interfaces for laptop and mobile views.
 
@@ -27,16 +27,16 @@ We also know that multiple operations or services are running with each other to
 
 In a monolithic application, all these services run under a single application layer so the ecommerce software architecture would look like this:
 
-![microservices-docker-image-two](https://images.ctfassets.net/h6vh38q7qvzk/2VOpZfj920EqUyGOCAwk0K/72fa8c6b075e069a18867d98eca92912/microservices-docker-image-two.png)
+![Sample Monolith Application](https://images.ctfassets.net/h6vh38q7qvzk/2VOpZfj920EqUyGOCAwk0K/72fa8c6b075e069a18867d98eca92912/microservices-docker-image-two.png)
 
-**Drawbacks**
+### **Drawbacks**
 
 1. It is evident that the application is going to grow in size with the increase in the number of services offered. This might become overwhelming for developers to build and maintain the application codebase
 2. Not only is it difficult to update your current stack, but it is a nightmare to change something in that stack
 3. Every change requires developers to rebuild the entirety of the application, which wastes resources.
 4. With the increase in the customer base, we will have more requests to process, which will require more resources. Therefore, it is essential to build products that can scale. With monolithic applications, we can scale only in one direction, i.e., vertically but not horizontally. This means we can scale the application over a single machine by adding more hardware resources such as memory and computational power, but it is still going to be a challenge to ensure horizontal scaling, which is spread across multiple machines
 
-"**Microservices" To The Rescue!**
+## 2. "**Microservices" To The Rescue!**
 
 `Microservice` architecture can be considered to be a specialization of SOA and an alternative pattern that overcomes the drawbacks of a monolithic architecture.
 
@@ -44,13 +44,13 @@ In this architecture, we focus on modularizing the application by dividing it in
 
 ![microservices-docker-image-three](https://images.ctfassets.net/h6vh38q7qvzk/1pygFCKRUok4S8WkgoKkAG/9bf084621a013ea0d17677ad2f34748e/microservices-docker-image-three.png)
 
-**Highlights**
+### **Highlights**
 
 1. Microservices Architecture and SOA are not the same, but they do hold some similarities. Microservice Architecture is referred to as a variant of SOA or even a specialization of SOA. In other words, SOA can be considered to be a superset of Microservices Architecture
 2. The main reason why people find similarity between these architectures is because both of them focus on building loosely coupled services for an application. These services have clear boundaries and separate, well-defined functionalities set for each one of them
 3. The difference lies in the fact that SOA can mean a lot of other things. For instance, SOA can be applicable over a Monolithic Architecture as well where the focus is to integrate systems together in an application and ensure code reusability. This does not hold true for a Microservice Architecture, where the focus is to modularize the application by building independent services and ensuring scalability of the product
 
-**Advantages**
+### **Advantages**
 
 1. Introduces the philosophy of `Separation of Concerns` and ensures `Agile Development` of software applications in both simple and complex domains
 2. The standalone ability or independent nature of microservices open doors for following benefits:
@@ -60,7 +60,7 @@ In this architecture, we focus on modularizing the application by dividing it in
    * In addition to giving you the flexibility to build services in any language, thereby making it language independent, it also allows you to maintain separate data models of each of the given services
 3. You can build a fully automated deployment mechanism for ensuring individual service deployments, service management and autoscaling of the application
 
-**Evolution Of Technologies**
+## **3. Evolution Of Technologies**
 
 Alongside, the evolution of software architectural patterns, we have also seen an emergence of some new technologies such as `Docker` and `Kubernetes` for supporting our software infrastructures and ensuring efficient management of our scalable products and services. We have evolved from using `hardware virtualization` to `containerization`.
 
