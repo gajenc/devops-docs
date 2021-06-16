@@ -2,7 +2,7 @@
 
 * [Intent of the Blog](README.md)
 
-## DevOps - General Intro <a id="devops-general"></a>
+## DevOps - In General <a id="devops-general"></a>
 
 * [What is DevOps?](devops-general/devops-building-blocks.md)
 * [The Rise Of Technology](devops-general/the-rise-of-technology.md)
