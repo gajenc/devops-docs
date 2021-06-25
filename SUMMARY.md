@@ -24,9 +24,9 @@
     * [Logging](devops-general/the-rise-of-kubernetes/traceability/untitled-1.md)
     * [Monitoring & Alerts](devops-general/the-rise-of-kubernetes/traceability/monitoring-and-alerts.md)
 * [Public & Private Clouds](devops-general/public-and-private-clouds.md)
-* [Infra-as-code\(IaC\)](devops-general/untitled-1/README.md)
-  * [Terraform](devops-general/untitled-1/terraform.md)
-  * [Ansible](devops-general/untitled-1/ansible.md)
+* [Infra-as-code\(IaC\)](devops-general/infra-as-code/README.md)
+  * [Terraform](devops-general/infra-as-code/terraform.md)
+  * [Ansible](devops-general/infra-as-code/ansible.md)
 * [CI/CD](devops-general/untitled.md)
 
 ## DIGIT - Infra
