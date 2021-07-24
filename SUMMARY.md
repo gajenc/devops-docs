@@ -31,6 +31,7 @@
 
 ## DIGIT - Infra
 
+* [Open Source Tools stack used in DIGIT](digit-infra/open-source-tools-stack-used-in-digit.md)
 * [Public Cloud vs SDC \(Private\)](digit-infra/public-cloud-vs-sdc-private.md)
 * [Infra Recommendation](digit-infra/infra-recommendation.md)
 * [Infra Requirement](digit-infra/infra-requirement.md)
