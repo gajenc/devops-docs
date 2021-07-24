@@ -2,7 +2,7 @@
 description: A multi tenanted DIGIT instance
 ---
 
-# DIGIT as Central Instance
+# Multi Tenancy - Central Instance
 
 DIGIT being a distributed system, hosting the DIGIT services as a Central SaaS Instance is surely an option and scaling the all/specific services/workloads depending on each state's needs/requirements. To achieve the same **Multi tenancy** is a key topic. We experienced this increased interest first hand at CDG. This interest is further curated by the results of the most respondents who indicated the use of a central instance simplifies the infra/operation for individual states or Small states with a deep isolation of access, services and resources. The emphasis on a central instance are the security, privacy and independant customization/configs which is an obvious challenge that DIGIT as a platform to address.
 
