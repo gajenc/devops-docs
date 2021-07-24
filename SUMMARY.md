@@ -51,7 +51,7 @@
 * [DIGIT DevOps overview](digit-devops/digit-devops-practice.md)
 * [1. DIGIT Architecture](digit-devops/1.-digit-architecture.md)
 * [2. GitRepos - Branching](digit-devops/2.-gitrepos-branching.md)
-* [3. Infra setup - Terraform](digit-devops/3.-infra-setup-terraform.md)
+* [3. Infra setup - Terraform \(IaC\)](digit-devops/3.-infra-setup-terraform.md)
 * [4. Ingress & Routing, WAF, SSL](digit-devops/7.-ingress-and-routing-waf-ssl.md)
 * [5. Deployment Configs](digit-devops/4.-deployment-configs.md)
 * [6. Helm Charts](digit-devops/5.-helm-charts.md)
