@@ -28,6 +28,7 @@
   * [Terraform](devops-general/infra-as-code/terraform.md)
   * [Ansible](devops-general/infra-as-code/ansible.md)
 * [CI/CD](devops-general/untitled.md)
+* [Deployment strategies](devops-general/deployment-strategies.md)
 * [Microservice Testing](devops-general/microservice-testing/README.md)
   * [The Testing Pyramid](devops-general/microservice-testing/the-testing-pyramid.md)
   * [Microservice - Unit Tests](devops-general/microservice-testing/microservice-unit-tests.md)
