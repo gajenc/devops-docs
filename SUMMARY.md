@@ -32,6 +32,7 @@
 * [Microservice Testing](devops-general/microservice-testing/README.md)
   * [The Testing Pyramid](devops-general/microservice-testing/the-testing-pyramid.md)
   * [Microservice - Unit Tests](devops-general/microservice-testing/microservice-unit-tests.md)
+* [Chaos Engineering](devops-general/chaos-engineering.md)
 
 ## DIGIT - Infra
 
