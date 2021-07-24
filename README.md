@@ -1,8 +1,8 @@
 ---
 description: >-
   To give an overview of the various tools, automation in General DevOps
-  practice and at the same time to understand how DIGIT has adopted the DevOps
-  practice and with some of the example of tools.
+  practice and at the same time to understand how to adopted the DevOps practice
+  with some of the examples.
 ---
 
 # Intent of the Blog
