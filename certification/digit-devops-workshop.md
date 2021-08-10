@@ -1,5 +1,5 @@
 ---
-description: Course design and topics
+description: Course structure and topics
 ---
 
 # DIGIT DevOps Certification
