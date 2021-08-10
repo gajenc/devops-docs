@@ -85,5 +85,5 @@
 ---
 
 * [DIGIT DevOps Training](digit-devops-training.md)
-* [DIGIT DevOps workshop](digit-devops-workshop.md)
+* [DIGIT DevOps Certification Course](digit-devops-workshop.md)
 

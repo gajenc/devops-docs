@@ -1,4 +1,4 @@
-# DIGIT DevOps workshop
+# DIGIT DevOps Certification Course
 
 ### Introduction
 
@@ -10,21 +10,45 @@
 * Story of DevOps vs. Traditional Silos
 *  QUIZ: DevOps Culture
 
-### Basics - Concepts & Introduction
+### Basics - Concepts & Demo
 
 * Microservices Architecture
-* GitOps \(DIGIT Repos\)
+* GitOps \(DIGIT Repos\), Quality Gates, Code Review, Fork, etc.
 * Build Automation & Continuous Integration 
+* Containerization \(Docker, Dockerfile\)
 * Continuous Delivery and Continuous Deployment \(CIOps\)
 * Infrastructure as Code \(Terraform\)
-* Configuration Management \(Helm\)
-* Containerization \(Docker, Dockerfile\)
+* Configuration Management \(Helm\), Packaging DIGIT
 * Orchestration \(Kubernetes\)
 * Monitoring & Observability
 * QUIZ: DevOps Basics
-* HANDS-ON  The DevOps Pipeline
+* HANDS-ON  Demo of a Sample DIGIT DevOps Pipeline e2e pipeline
 
-### Practice -
+### Practitioner - Handson CI/CD, Dockers, Kubernetes, Deployment
+
+* HANDS-ON: Setup DIGIT CIOps \(Jenkins, Plugins, Jenkins Slave Agents\)
+* HANDS-ON: Create DIGIT CI/CD Pipeline, Using Parameters in a Job
+* HANDS-ON  Creating a Dockerfile for a DIGIT service
+* HANDS-ON  Setting Up a Kubernetes Cluster local/cloud
+* HANDS-ON  Generating Kubeconfigs for a New Kubernetes Cluster
+* HANDS-ON  Configuring Kubectl to Access a Remote Cluster
+* HANDS-ON  Deploy DIGIT, iFIX
+* HANDS-ON  Scaling Pods in Kubernetes
+* HANDS-ON  Creating a Helm Chart
+
+### Advanced - Troubleshooting, Monitoring, Release Gating, RBAC
+
+* Rolling Updates
+* Release Gating
+* Estimation of the DIGIT Infra
+* Setup Observability for DIGIT
+* Troubleshooting kubernetes and DIGIT services 
+
+
+
+
+
+
 
 ### DevOps Tools
 
@@ -62,6 +86,7 @@
 
 * Container Orchestration with Kubernetes
 * HANDS-ON  Setting Up a Kubernetes Cluster with Docker
+* HANDS-ON  Configuring Kubectl to Access a Remote Cluster
 * HANDS-ON  Scaling Pods in Kubernetes
 * HANDS-ON  Creating a Helm Chart
 
