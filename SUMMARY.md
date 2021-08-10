@@ -82,3 +82,8 @@
   * [Exercise 1: \(2nd Level\)](hiring-devops/devops-hiring/devops-exercise.md)
   * [Exercise 2:](hiring-devops/devops-hiring/exercise-2.md)
 
+---
+
+* [DIGIT DevOps Training](digit-devops-training.md)
+* [DIGIT DevOps workshop](digit-devops-workshop.md)
+
