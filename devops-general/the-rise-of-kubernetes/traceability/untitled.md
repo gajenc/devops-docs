@@ -1,12 +1,12 @@
 # Distributed Tracing
 
-## Introduction <a id="introduction"></a>
+## Introduction <a href="introduction" id="introduction"></a>
 
 Distributed tracing is a method used to profile and monitor applications, especially those built using a microservices architecture. Distributed tracing helps pinpoint where failures occur and what causes poor performance.
 
-​[OpenTracing](https://opentracing.io/) has been a key capability when it comes to microservices-based distributed systems like DIGIT. We’ll start with the introduction of OpenTracing, explaining what it is and why it is important We shall also set up Jaeger and learn to use it for monitoring and troubleshooting.
+​[OpenTracing](https://opentracing.io) has been a key capability when it comes to microservices-based distributed systems like DIGIT. We’ll start with the introduction of OpenTracing, explaining what it is and why it is important We shall also set up Jaeger and learn to use it for monitoring and troubleshooting.
 
-## Drift to Microservice Architecture <a id="drift-to-microservice-architecture"></a>
+## Drift to Microservice Architecture <a href="drift-to-microservice-architecture" id="drift-to-microservice-architecture"></a>
 
 ​[Microservice](https://en.wikipedia.org/wiki/Microservices) Architecture has now become the obvious choice for application developers. In the Microservice Architecture, a monolithic application is broken down into a group of independently deployed services. In simple words, an application is more like a collection of microservices. When we have millions of such intertwined microservices working together, it’s almost impossible to map the inter-dependencies of these services and understand the execution of a request.
 
@@ -14,7 +14,7 @@ In case of a failure in a monolithic application, it is much easier to understan
 
 Is this service the first one in the call chain? How do I span all these services to get insight into the application? With questions like these, it becomes a significantly larger problem to debug a set of interdependent distributed services in comparison to a single monolithic application, making OpenTracing more and more popular.
 
-## OpenTracing <a id="opentracing"></a>
+## OpenTracing <a href="opentracing" id="opentracing"></a>
 
 The _OpenTracing_ API provides a standard, vendor-neutral framework for instrumentation. This means that if a developer wants to try out a different distributed tracing system, then instead of repeating the whole instrumentation process for the new distributed tracing system, the developer can simply change the configuration of the Tracer.
 
@@ -28,7 +28,7 @@ Here are some basic terminologies of Opentracing:
 
 OpenTracing is a way for services to “_describe and propagate distributed traces without knowledge of the underlying OpenTracing implementation._”
 
-Let us take the example of a service like egov-property service \(or any other DIGIT service\). A service like this requires many other microservices to check that the location is available, proper payment credentials are received, and enough details exist for the ULB to process the property tac. If either one of those microservice fails, then the entire transaction fails. In such a case, having logs just for the main property service wouldn’t be very useful for debugging. However, if you were able to analyze each service you wouldn’t have to scratch your head to troubleshoot which microservice failed and what made it fail.
+Let us take the example of a service like egov-property service (or any other DIGIT service). A service like this requires many other microservices to check that the location is available, proper payment credentials are received, and enough details exist for the ULB to process the property tac. If either one of those microservice fails, then the entire transaction fails. In such a case, having logs just for the main property service wouldn’t be very useful for debugging. However, if you were able to analyze each service you wouldn’t have to scratch your head to troubleshoot which microservice failed and what made it fail.
 
 In real life, applications are even more complex and with the increasing complexity of applications, monitoring the applications has been a tedious task. Opentracing helps us to easily monitor:
 
@@ -38,7 +38,7 @@ In real life, applications are even more complex and with the increasing complex
 * Hierarchy of services
 * Errors or exceptions during execution of each service.
 
-## Jaeger: A Distributed Tracing System by Uber <a id="jaeger-a-distributed-tracing-system-by-uber"></a>
+## Jaeger: A Distributed Tracing System by Uber <a href="jaeger-a-distributed-tracing-system-by-uber" id="jaeger-a-distributed-tracing-system-by-uber"></a>
 
 _Jaeger_ is used for monitoring and troubleshooting microservices-based distributed systems, including:
 
@@ -48,9 +48,9 @@ _Jaeger_ is used for monitoring and troubleshooting microservices-based distribu
 * Service dependency analysis
 * Distributed context propagation
 
-### Major Components of Jaeger <a id="major-components-of-jaeger"></a>
+### Major Components of Jaeger <a href="major-components-of-jaeger" id="major-components-of-jaeger"></a>
 
-**Jaeger Client Libraries** — Jaeger clients are language-specific implementations of the [OpenTracing API](http://opentracing.io/).
+**Jaeger Client Libraries** — Jaeger clients are language-specific implementations of the [OpenTracing API](http://opentracing.io).
 
 **Agent** — The Jaeger agent is a network daemon that listens for spans sent over UDP, which it batches and sends to the collector. It is designed to be deployed to all hosts as an infrastructure component. The agent abstracts the routing and discovery of the collectors away from the client.
 
@@ -58,18 +58,18 @@ _Jaeger_ is used for monitoring and troubleshooting microservices-based distribu
 
 **Query** — Query is a service that retrieves traces from storage and hosts a UI to display them.
 
-**Ingester** — Ingester is a service that reads from Kafka topic and writes to another storage backend \(Cassandra, Elasticsearch\).
+**Ingester** — Ingester is a service that reads from Kafka topic and writes to another storage backend (Cassandra, Elasticsearch).
 
-### Running Jaeger in a Docker Container <a id="running-jaeger-in-a-docker-container"></a>
+### Running Jaeger in a Docker Container <a href="running-jaeger-in-a-docker-container" id="running-jaeger-in-a-docker-container"></a>
 
 1. First, install Jaeger Client on your machine:
 2. Now, let’s run Jaeger backend as an all-in-one Docker image. The image launches the Jaeger UI, collector, query, and agent:
 
 **TIP**: To check if the docker container is running, use: _**Docker ps.**_
 
-Once the container starts, open [_http://localhost:16686/_](http://127.0.0.1:16686/) to access the Jaeger UI. The container runs the Jaeger backend with an in-memory store, which is initially empty, so there is not much we can do with the UI right now since the store has no traces.
+Once the container starts, open [_http://localhost:16686/_](http://127.0.0.1:16686) to access the Jaeger UI. The container runs the Jaeger backend with an in-memory store, which is initially empty, so there is not much we can do with the UI right now since the store has no traces.
 
-## Creating Traces on Jaeger UI <a id="creating-traces-on-jaeger-ui"></a>
+## Creating Traces on Jaeger UI <a href="creating-traces-on-jaeger-ui" id="creating-traces-on-jaeger-ui"></a>
 
 **1. Create a Python program to create Traces**
 
@@ -83,7 +83,7 @@ Here is a brief description of how OpenTracing has been used in the program:
 
 * Initializing a tracer:
 * Using the tracer instance:
-* Starting new child spans using start\_span:
+* Starting new child spans using start_span:
 * Using Tags:
 * Using Logs:
 
@@ -99,7 +99,7 @@ To view the detailed trace, you can select a specific trace instance and check d
 
 ![](https://gblobscdn.gitbook.com/assets%2F-MERG_iQW5oN4ukgXP8K%2Fsync%2F5560ec50f10b7e1d1c797dda1c4888c4cce39920.png?alt=media)
 
-## Conclusion <a id="conclusion"></a>
+## Conclusion <a href="conclusion" id="conclusion"></a>
 
 In this blog, we’ve described the importance and benefits of OpenTracing, one of the core pillars of modern applications. We also explored how distributed tracer Jaeger collect and store traces while revealing inefficient portions of our applications. It is fully compatible with OpenTracing API and has a number of clients for different programming languages including Java, Go, Node.js, Python, PHP, and more.
 
@@ -109,4 +109,3 @@ In this blog, we’ve described the importance and benefits of OpenTracing, one 
 
 * [https://www.jaegertracing.io/docs/1.9/](https://www.jaegertracing.io/docs/1.9/)
 * [https://opentracing.io/docs/](https://opentracing.io/docs/)
-

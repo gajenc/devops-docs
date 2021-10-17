@@ -2,5 +2,5 @@
 description: Multiple Choices Questions
 ---
 
-# Basic \(1st Level\)
+# Basic (1st Level)
 

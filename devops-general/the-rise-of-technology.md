@@ -8,7 +8,7 @@ Are you a software engineer/developer/coder or maybe even a tech enthusiast who 
 
 In the early 2000's, we witnessed the rise of `Service Oriented Architecture (SOA)`, a popular design paradigm for building software. In simple words, SOA is a software architecture pattern that allows us to construct large-scale enterprise applications that generally require us to integrate multiple services, each of which is made over different platforms and languages through a common communication mechanism.
 
-## 1. Service Oriented Architecture \(SOA\):
+## 1. Service Oriented Architecture (SOA):
 
 ![Here is a simple pictorial representation of the SOA](https://images.ctfassets.net/h6vh38q7qvzk/2VOExO2cuIoCaMIkuw0WW0/a8ffeeeeb49605c6e92ff75d65e226e1/microservices-docker-image-one.png)
 
@@ -16,7 +16,7 @@ In the early 2000's, we witnessed the rise of `Service Oriented Architecture (SO
 
 1. SOA is preferred for large-scale software products such as enterprise applications
 2. SOA focuses on integrating multiple services in a single application rather than emphasizing on modularizing the application
-3. The common communication mechanism used for interaction between various services in an SOA is referred to as [Enterprise Service Bus \(ESB\)](https://en.wikipedia.org/wiki/Enterprise_service_bus)
+3. The common communication mechanism used for interaction between various services in an SOA is referred to as [Enterprise Service Bus (ESB)](https://en.wikipedia.org/wiki/Enterprise_service_bus)
 4. SOA based applications could be `monolithic` in nature. This means that you have single application layer which contains your user interface or presentation layer, business logic or application layer, and database layer all integrated into a single platform
 
 ### **Interesting, Tell Me More About "Monolithic Architecture"**
@@ -74,7 +74,7 @@ The first picture shows a physical machine or a hardware server. Typically, when
 
 Also, you might be thinking if you require all the resources of your hardware and host OS at the same time for running your application. Not really, so then why such a massive infrastructure?
 
-This has led to the evolution of hardware virtualization for optimizing IT infrastructure setups through what we call today as Virtual Machines \(VMs\). As you see in the second diagram, VMs have their guest OS which is run over a single physical machine or host OS. This enables us to run multiple applications without needing installing numerous physical machines. The host OS can ensure that there are systematic resource distribution and load balancing between the different VMs running on it.
+This has led to the evolution of hardware virtualization for optimizing IT infrastructure setups through what we call today as Virtual Machines (VMs). As you see in the second diagram, VMs have their guest OS which is run over a single physical machine or host OS. This enables us to run multiple applications without needing installing numerous physical machines. The host OS can ensure that there are systematic resource distribution and load balancing between the different VMs running on it.
 
 Although VMs made software more accessible to maintain and drastically reduced costs, more optimization was still possible. For instance, not all applications would behave as expected in a guest OS environment. Additionally, the guest OS would require a lot of resources for even running simple processes.
 
@@ -83,5 +83,4 @@ These problems led to the next innovation: containerization. Unlike virtual mach
 1. You can run multiple containers on a physical machine, or you can even think of running it on a single VM. In either case, it solves your application related problems
 2. Containerization is not in competition with Virtualization, but rather a complementary factor to further optimize your IT software infrastructure
 
-\*\*\*\*
-
+****

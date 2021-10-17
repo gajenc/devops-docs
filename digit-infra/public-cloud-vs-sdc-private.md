@@ -1,4 +1,4 @@
-# Public Cloud vs SDC \(Private\)
+# Public Cloud vs SDC (Private)
 
 To see many of the advantages of cloud computing without its risks, many enterprises are turning to private clouds, which are service layers contained within their firewalls that look and feel like public clouds. But these private clouds may actually be less secure and reliable than the public services.
 
@@ -6,7 +6,7 @@ That's the general view of after the realtime challenges, private clouds often a
 
 Some may not agree about on-premises — in fact, I expect violent disagreement. And this is more of an either/or argument, rather than raising the possibility of blended strategies, such as employing public clouds as test beds, but keeping applications in production within private clouds.
 
-That said, here are the points about public cloud and against private cloud \(SDCs\):
+That said, here are the points about public cloud and against private cloud (SDCs):
 
 1. **Private clouds tend to use older technology than public clouds:** You may have spent hundreds of thousands of dollars on new hardware and software, but try getting your organization to agree to that every year.
 2. **Public clouds shift capital expenses to operational expenses:** It's pay as you go, versus building an entire datacenter, no matter how virtualized it may be.
@@ -19,5 +19,4 @@ That said, here are the points about public cloud and against private cloud \(SD
 9. **Public clouds attract the best security people available:** They seek out the top security experts, will pay them top dollar, and treat them as the most important part of their businesses, which they are. Do traditional enterprises treat security teams this way?
 10. **Private clouds suffer from "perimeter complacency":** "If it's on the internal network, it must be secure!" 'nuff said...
 11. **Private cloud staff competence is an unknown**: Your organization may have a lot of talented and knowledgeable people, but is data security the main line of your business?
-12. **Private cloud penetration testing is insufficient:** Even if you test your applications and networks on a regular basis \(which man organizations don't\), these only tell you if things are secure at that exact moment.
-
+12. **Private cloud penetration testing is insufficient:** Even if you test your applications and networks on a regular basis (which man organizations don't), these only tell you if things are secure at that exact moment.

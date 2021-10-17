@@ -4,7 +4,7 @@ description: DevOps Multiple choices questions for 30 Min Preliminary tests.
 
 # MCQ 1
 
-## 1. System Testing is a \_\_\_\_\_\_.
+## 1. System Testing is a \__\__\__.
 
 1.  **Black box testing**
 2.  White box testing
@@ -15,7 +15,7 @@ description: DevOps Multiple choices questions for 30 Min Preliminary tests.
 
 1.  Integration Testing
 2.  Acceptance Testing
-3.  **Unit Testing**
+3. ** Unit Testing**
 4.  System Testing
 
 ## 3. When is Acceptance Testing performed in Agile development?
@@ -59,19 +59,19 @@ description: DevOps Multiple choices questions for 30 Min Preliminary tests.
 
 ## 9. Which one of following release patterns does not enable you to do low risk DevOps code deployments in your production systems?
 
-1.  Canary Deployment Pattern \(The Dark Launch\)
+1.  Canary Deployment Pattern (The Dark Launch)
 2.  Blue-Green Deployment Pattern
 3.  Cluster Immune System Release Pattern
-4.  **Big bang code deployments of fully tested and validated releases**
+4. ** Big bang code deployments of fully tested and validated releases**
 
-## 10. \_\_\_\_\_\_\_\_\_ computing refers to applications and services that run on a distributed network using virtualized resources.
+## 10. \__\__\__\__\_ computing refers to applications and services that run on a distributed network using virtualized resources.
 
 1.  Distributed
 2.  **Cloud**
 3.  Soft
 4.  Parallel
 
-## 11. \_\_\_\_\_\_\_ provides virtual machines, virtual storage, virtual infrastructure, and other hardware assets
+## 11. \__\__\__\_ provides virtual machines, virtual storage, virtual infrastructure, and other hardware assets
 
 1.  **IaaS**
 2.  SaaS
@@ -85,7 +85,7 @@ description: DevOps Multiple choices questions for 30 Min Preliminary tests.
 3.  Data Privacy
 4.  All of the mentioned
 
-## 13. The most commonly used set of protocols uses \_\_\_\_\_\_ as the messaging format
+## 13. The most commonly used set of protocols uses \__\__\__ as the messaging format
 
 1.  **XML**
 2.  JSON
@@ -148,7 +148,7 @@ description: DevOps Multiple choices questions for 30 Min Preliminary tests.
 
 ## 22. Which of the following commands runs Jenkins from the command line?
 
-1.  **java -jar jenkins.war**
+1. ** java -jar jenkins.war**
 2.  java -war jenkins.jar
 3.  java -jar jenkins.jar
 4.  java -war jenkins.war
@@ -173,6 +173,4 @@ description: DevOps Multiple choices questions for 30 Min Preliminary tests.
 2.  **It provides lifecycle management**
 3.  It is procedural
 4.  It doesn't have formal conventions
-
-
 

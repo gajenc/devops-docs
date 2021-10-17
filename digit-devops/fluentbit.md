@@ -2,5 +2,3 @@
 
 {% embed url="https://youtu.be/WKP5cqToMlM" %}
 
-
-

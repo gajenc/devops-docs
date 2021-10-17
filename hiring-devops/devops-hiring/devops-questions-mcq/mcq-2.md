@@ -14,7 +14,7 @@ description: 30 Min
 ## Which of the following can't be tested in JUnit Test class?
 
 1.  Protected Methods
-2.  **Private Methods**
+2. ** Private Methods**
 3.  Public Methods
 4.  None of the above
 
@@ -27,14 +27,14 @@ description: 30 Min
 
 ## Which Assert method checks that the condition is true?
 
-1.  void assert\(boolean condition\)
-2.  void assert\(boolean condition\)
-3.  **void assertTrue\(boolean condition\)**
-4.  void assertChecks\(boolean condition\)
+1.  void assert(boolean condition)
+2.  void assert(boolean condition)
+3. ** void assertTrue(boolean condition)**
+4.  void assertChecks(boolean condition)
 
 ## Which of the following best describes DevOps?
 
-1.  **Establish an environment to release more reliable applications faster**
+1. ** Establish an environment to release more reliable applications faster**
 2.  Establish an environment where the release of applications is valued more than its quality
 3.  Establish an environment where application development performs all the operation tasks
 4.  Establish an environment where change management does not control application releases
@@ -81,7 +81,7 @@ description: 30 Min
 3.  Html
 4.  C++ 
 
-## DevOps is an extension of \_\_\_\_\_\_\_\_\_\_\_\_\_\_
+## DevOps is an extension of \__\__\__\__\__\__\__
 
 1.  QA
 2.  **Agile**
@@ -102,7 +102,7 @@ description: 30 Min
 3.  Head pointer
 4.  **Body element**
 
-## Which below command is used to list Ansible\_Variables?
+## Which below command is used to list Ansible_Variables?
 
 1.  ansible pull
 2.  ansible-playbook
@@ -114,7 +114,7 @@ description: 30 Min
 1.  Negotiate with release managers
 2.  Publicly complain about bureaucracy and make everyone be aware of it
 3.  Make sure normal changes are very carefully deployed to your production systems
-4.  **Use your track record of successful automated deployments with standard changes**
+4. ** Use your track record of successful automated deployments with standard changes**
 
 ## Which of the below method least impacts to implement DevOps?
 
@@ -122,4 +122,3 @@ description: 30 Min
 2.  Lean Manufacturing
 3.  Continuous Software Delivery
 4.  **Waterfall Software Delivery**
-

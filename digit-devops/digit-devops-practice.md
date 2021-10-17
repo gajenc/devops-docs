@@ -4,7 +4,7 @@ Let's talk about an end-to-end example of the DevOps practice in product/platfor
 
 #### **Let's understand the tools/process Involved to coordinate and collaborate internally during the development, testing, packaging and releasing it to production.**
 
-To start with the product roadmap/planning, we use **Atlassian JIRA** to manage the Agile planning, and **Jenkins \(CI/CD\)** as a build and release tool. The source code is maintained in **GitHub**. The platform/product services are baked into **Docker** containers,  deployed-and-orchestrated on **Kubernetes**. These tools and interlinking of these tools play a vital role in achieving DevOps practice.
+To start with the product roadmap/planning, we use **Atlassian JIRA** to manage the Agile planning, and **Jenkins (CI/CD)** as a build and release tool. The source code is maintained in **GitHub**. The platform/product services are baked into **Docker** containers,  deployed-and-orchestrated on **Kubernetes**. These tools and interlinking of these tools play a vital role in achieving DevOps practice.
 
 The goal here is to simulate a real-life situation using DIGIT DevOps while incorporating all of the moving parts of a true production system. This allows us to focus on the DevOps process and de-emphasize the code details. The following topics are included:
 
@@ -19,43 +19,43 @@ The goal here is to simulate a real-life situation using DIGIT DevOps while inco
   * **UAT** is a production-like env used for ensuring by our delivery teams. 
   * **QA** environment is used for integration testing, UAT, automated QA testing, and load testing. Software is released into the **QA** environment each day, where these tests are then executed. 
   * **Dev** environment is for the developers to frequently integrate changes from feature branches and DevTest before releasing it to QA. 
-* **Infrastructure as Code** – DIGIT runs on kubernetes, and the base infra to provision kubernetes can be on any cloud, we use **Infra-As-Code** \(IaC\) tools like terraform or ansible to provision infra by defining compute, storage, DB and network infrastructure through source code that can then be treated just like any software system. Such code can be kept in source control to allow auditability.
+* **Infrastructure as Code** – DIGIT runs on kubernetes, and the base infra to provision kubernetes can be on any cloud, we use **Infra-As-Code** (IaC) tools like terraform or ansible to provision infra by defining compute, storage, DB and network infrastructure through source code that can then be treated just like any software system. Such code can be kept in source control to allow auditability.
 * **Release Process** – A release pipeline is used to gather the artifacts created in the build process and to deploy them to the respective environments.
 
 In this section, we discuss one possible approach to delivering software via DevOps . It is important that you understand this so that you can see why we do what we do in DevOps. The diagram below depicts our DevOps implementation, and we will be referring to this diagram throughout.
 
-![Versioning &amp; CICD](../.gitbook/assets/image%20%2811%29.png)
+![Versioning & CICD](<../.gitbook/assets/image (6).png>)
 
 ### Environments in Details:
 
 The required machines, network, storage, database, and other infrastructure elements are defined in the source code and version controlled. This approach is known as **Infrastructure as Code** and is a key part of a DevOps implementation. Since we are using a variety of cloud-based solutions, it is very easy for us to provision environments. Since everything is defined in the source code, provisioning an environment can be done in a snap . We use the following environments:
 
-* **Dev** – Each day, the code base from the **Feature** branch is deployed to this environment. Integration tests are run here, since this environment allows them to hit infrastructure with continuous changes from other developers \(**Dev inprogress\)**. 
+* **Dev** – Each day, the code base from the **Feature** branch is deployed to this environment. Integration tests are run here, since this environment allows them to hit infrastructure with continuous changes from other developers (**Dev inprogress)**. 
 * **QA** – Upon working feature complete, the code base from the **Develop** branch is deployed here upon **DevDone**. This is done on demand by the QA engineers conducting the testing. Automated QA tests are also run nightly in this environment.
 * **UAT** - Upon **QA Sign-off**, the code base from the **master** branch is deployed here on demand for the UAT Approval. This is the environment used by product owners/Delivery teams to the acceptance testing.
 * **Production** – The code base from the **master** branch is deployed here upon release testing sign off with the overall release items. This is the environment used by our end users.
 
-![](../.gitbook/assets/image%20%284%29.png)
+![](<../.gitbook/assets/image (11).png>)
 
 ### Version control & Branching
 
 We follow an Agile approach using Scrum and two-week sprints. We typically release changes to UAT at the end of each sprint and the main release to production would be once in every quarter.
 
-Each release uses a version number. We use [Semantic Version](http://semver.org/) numbers for our services, which gives us version numbers like **1.0.2**. Each time a build is run, the build number is incremented and added to the end of the version number. Using the example above, the fifth build  would result in a version number of **1.0.2-\#5**. This version number is displayed on the services. 
+Each release uses a version number. We use [Semantic Version](http://semver.org) numbers for our services, which gives us version numbers like **1.0.2**. Each time a build is run, the build number is incremented and added to the end of the version number. Using the example above, the fifth build  would result in a version number of **1.0.2-#5**. This version number is displayed on the services. 
 
 This means that we always know the version of the software we are running and can trace it back to version control. 
 
-Any release is a bundle of services with specific versions and finally release with the larger release platform/product level version number. \(Eg: DIGIT 2.0 \(15-June-2020\) and subsequent releases within the same year gets incremented. 
+Any release is a bundle of services with specific versions and finally release with the larger release platform/product level version number. (Eg: DIGIT 2.0 (15-June-2020) and subsequent releases within the same year gets incremented. 
 
 
 
-![](../.gitbook/assets/image.png)
+![](<../.gitbook/assets/image (9).png>)
 
 We use Git for our version control. The **master** branch is where our production code resides, and we have a **develop** branch for the sprint items. When the sprint ends, we perform a pull request from the **Develop** branch into the **master** branch.
 
 Each user story has a **feature** branch as well. When a developer has finished working on a user story, a pull request is made into the **develop** branch.
 
-![Branching &amp; Gitflow](../.gitbook/assets/image%20%289%29.png)
+![Branching & Gitflow](<../.gitbook/assets/image (10).png>)
 
 ### Development & Testing Flow
 
@@ -65,7 +65,7 @@ When work is begun on a story, a new branch is created from the develop branch. 
 
 A Unit Test is a quick running test that is typically mocked so it can run quickly. Integration tests are implemented using the unit test framework but typically include infrastructure such as the database. Integration tests can be run nightly to save build time.
 
-When a story is ready for QA testing, a pull request into the develop branch is made. This is where peer **code reviews** are conducted, also the **static code analysis**, **vulnerability assessment,** etc. Any validation failures are addressed here and update the PR.
+When a story is ready for QA testing, a pull request into the develop branch is made. This is where peer **code reviews **are conducted, also the **static code analysis**, **vulnerability assessment,** etc. Any validation failures are addressed here and update the PR.
 
 Once the pull request is approved against above mentioned checks, the code is merged into the **develop** branch, and the **continuous integration build** is invoked. Any broken unit tests are addressed at this point.
 
@@ -91,8 +91,8 @@ This is where we implement **Continuous Integration** and **Continuous Deploymen
 
 We considered a CI/CD flow that mainly follows these steps:
 
-* A _Feature Branch_ \(FB\) is created from develop branch. The developer will add the code and periodically synchronize and merge the other changes from develop to FB until the desired code changes are implemented.
-* A _Pull Request_ \(PR\) is created when all the work in a _FB_ is done
+* A _Feature Branch_ (FB) is created from develop branch. The developer will add the code and periodically synchronize and merge the other changes from develop to FB until the desired code changes are implemented.
+* A _Pull Request_ (PR) is created when all the work in a _FB_ is done
 * The _PR_ is reviewed and validated when it passes all the unit tests, integration, e2e, etc.
 * Finally, if the _PR_ gets the green light after passing all the validation, the _FB_ is merged to develop and the new version is deployed in QA.
 
@@ -101,12 +101,12 @@ With that flow we wanted the developer not to have to worry about anything and t
 We also wanted to take into account the following for each _PR_:
 
 * A new CI pipeline is triggered to build the code and run all the tests ensuring to keep the _FB_ in a ready to merge state
-* The _PR_ is deployed to a **Dev** \(_Preview Environment\)_ that gives you faster feedback for your changes before they are merged and released and allows you to avoid having human approval inside the  pipeline to speed up delivery of changes merged to develop.
+* The_ PR_ is deployed to a **Dev** (_Preview Environment) _that gives you faster feedback for your changes before they are merged and released and allows you to avoid having human approval inside the  pipeline to speed up delivery of changes merged to develop.
 
 When a _PR_ is merged to the Develop branch:
 
 * A new/intended semantic version number is generated
-* New versioned artifacts are published including: docker images, helm charts and any language specific artifacts \(e.g. libraries, jar files, npm packages, etc\)
+* New versioned artifacts are published including: docker images, helm charts and any language specific artifacts (e.g. libraries, jar files, npm packages, etc)
 * The new version is promoted to QA.
 * When all the testing is done, the changes are merged to master.
 
@@ -121,7 +121,7 @@ A build is configured for the master and develop branches. The build receives th
 
 ## More on CI/CD:
 
-![](https://lh3.googleusercontent.com/B_UxLt1mE3vmptMZMY5hpU60xpv2mHUZJcBOveDqHp1iRzzJUKX40_G3kd-E5VADhp9ziOFudQ73q1UtjwbwpmUQTVvbdqht3EWdUnx-FwOvAQBNM5qwqeBHqqyFDKG3BHdtAaY8)
+![](https://lh3.googleusercontent.com/B_UxLt1mE3vmptMZMY5hpU60xpv2mHUZJcBOveDqHp1iRzzJUKX40\_G3kd-E5VADhp9ziOFudQ73q1UtjwbwpmUQTVvbdqht3EWdUnx-FwOvAQBNM5qwqeBHqqyFDKG3BHdtAaY8)
 
 When a team has successfully completed a set of user stories that meet the definition of done and are potentially shippable, it is time to actually deploy the software. This step can be a challenge to many firms.
 
@@ -135,13 +135,12 @@ DevOps strives for software releases without fear that are easy and can be done 
 
 Much of implementing a successful DevOps process involves automation of as many processes as possible. Anything that is left manual is error prone and slows the process down. 
 
-A typical DevOps Pipeline is shown in the diagram. This is an automated process that is performed day-by-day as the sprint progresses. Each time code is checked in, a Build is executed that Compiles the codebase, runs unit tests, Code analysis and, when successful, packages the code into a Release Artifact. This is known as **Continuous Integration \(CI\)**.
+A typical DevOps Pipeline is shown in the diagram. This is an automated process that is performed day-by-day as the sprint progresses. Each time code is checked in, a Build is executed that Compiles the codebase, runs unit tests, Code analysis and, when successful, packages the code into a Release Artifact. This is known as **Continuous Integration (CI)**.
 
 On a scheduled basis, the Release Artifact is deployed from master branch into a Production Like Environment known as the **UAT** Environment. Here more tests are executed that include Integration tests that hit a database, Automated QA Tests, performance, security and Load Tests. 
 
-When all tests pass, and when we have a Release Candidate, we are ready to deploy to production. This may require additional Environments, manual steps and approvals. This is known as **Continuous Deployment \(CD\).**
+When all tests pass, and when we have a Release Candidate, we are ready to deploy to production. This may require additional Environments, manual steps and approvals. This is known as **Continuous Deployment (CD).**
 
 The crucial point here is the Release Artifact that was developed in the sprint, was compiled, and unit tested hundreds of times. This same artifact was deployed to the QA Environment where it was Integration Tested, QA Tested and Load Tested dozens of times. This exact same artifact following the same process is ultimately deployed to UAT and Production. 
 
 If you have a war room every time you do a production deployment, it means you are expecting problems and have deployments that are far too “exciting”. The DevOps movement is focused on solving this problem. 
-

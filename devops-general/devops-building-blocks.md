@@ -18,5 +18,3 @@ DevOps is **not a seperate function** which is different from the above roles, r
 
 
 
-
-

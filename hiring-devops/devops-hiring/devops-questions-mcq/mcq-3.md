@@ -58,7 +58,7 @@ description: 30 Min
 
 **Correct Answer:** Choice-3 / Errors, incidents and fixes.
 
-## **7.** Why is it a good idea to limit batch size of your continuous DevOps deliveries?
+## **7. **Why is it a good idea to limit batch size of your continuous DevOps deliveries?
 
 * **Choice-1:** You will be quicker to identify root causes of issues and resolve them.
 * **Choice-2:** By continuously delivering in production, your team will have the constant pride of contributing your organizational mission.
@@ -67,7 +67,7 @@ description: 30 Min
 
 **Correct Answer:** Choice-4 / All above choices.
 
-## **8.** What is trunk in trunk based DevOps delivery?
+## **8. **What is trunk in trunk based DevOps delivery?
 
 * **Choice-1:** Developers collaborate on code in a single branch called “trunk”.
 * **Choice-2:** Trunk is a special private branch in a developer workstation.
@@ -76,18 +76,18 @@ description: 30 Min
 
 **Correct Answer:** Choice-1 / Developers collaborate on code in a single branch called “trunk”.
 
-## **9.** Which one of the following is not one of the DevOps principles for good test automation?
+## **9. **Which one of the following is not one of the DevOps principles for good test automation?
 
 * **Choice-1:** Test Automation should give quick and early feedback about your quality of work.
-* **Choice-2:** Never mix test driven development \(TDD\) together with your test automation approach.
+* **Choice-2:** Never mix test driven development (TDD) together with your test automation approach.
 * **Choice-3:** Tests should generate consistent, deterministic and repeatable results provided same conditions for different test runs.
 * **Choice-4:** With your test automation, avoid slow and periodic feedback. What you need is fast feedback whenever you or your developer attempts to check-in code to your trunk.
 
-**Correct Answer:** Choice-2 / Never mix test driven development \(TDD\) together with your test automation approach.
+**Correct Answer:** Choice-2 / Never mix test driven development (TDD) together with your test automation approach.
 
-## **10.** Which one of following release patterns does not enable you to do low risk DevOps code deployments in your production systems?
+## **10. **Which one of following release patterns does not enable you to do low risk DevOps code deployments in your production systems?
 
-* **Choice-1:** Canary Deployment Pattern \(The Dark Launch\).
+* **Choice-1:** Canary Deployment Pattern (The Dark Launch).
 * **Choice-2:** Blue-Green Deployment Pattern.
 * **Choice-3:** Cluster Immune System Release Pattern.
 * **Choice-4:** Big bang code deployments of fully tested and validated releases.
@@ -103,7 +103,7 @@ description: 30 Min
 
 **Correct Answer:** Choice-1 / Use your track record of successful automated deployments with standard changes.
 
-## **12.** What is a widely used reusable asset to reinforce information security of deliverables from your DevOps team?
+## **12. **What is a widely used reusable asset to reinforce information security of deliverables from your DevOps team?
 
 * **Choice-1:** Data storage systems.
 * **Choice-2:** Handling the logging of sensitive client information.
@@ -112,7 +112,7 @@ description: 30 Min
 
 **Correct Answer:** Choice-4 / All above choices.
 
-## **13.** What is not one of major benefits of designing a safe system of work culture?
+## **13. **What is not one of major benefits of designing a safe system of work culture?
 
 * **Choice-1:** Complexity of your systems will be managed, so problems in designs and operations will be quickly detected.
 * **Choice-2:** DevOps team does no longer need to be careful and mindful to ensure quality.
@@ -121,7 +121,7 @@ description: 30 Min
 
 **Correct Answer:** Choice-2 / DevOps team does no longer need to be careful and mindful to ensure quality.
 
-## **14.** What is telemetry?
+## **14. **What is telemetry?
 
 * **Choice-1:** Telemetry is a widely known SaaS tool to plan and execute DevOps projects.
 * **Choice-2:** Telemetry is a communication tool used by DevOps teams at geographically distributed locations.
@@ -130,7 +130,7 @@ description: 30 Min
 
 **Correct Answer:** Choice-3 / Telemetry is the process of recording the behaviour of your systems.
 
-## **15.** In terms of fixing errors in your production systems what is the major benefit of using feature toggles embedded in configurations of your software applications?
+## **15. **In terms of fixing errors in your production systems what is the major benefit of using feature toggles embedded in configurations of your software applications?
 
 * **Choice-1:** This is easiest way to fix a problem. It doesn’t require an urgent code deployment.
 * **Choice-2:** You don’t have to very urgently correct erroneous pieces in your deployment.
@@ -138,4 +138,3 @@ description: 30 Min
 * **Choice-4:** All above choices.
 
 **Correct Answer:** Choice-4 / All above choices.
-

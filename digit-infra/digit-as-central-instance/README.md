@@ -4,17 +4,19 @@ description: A multi tenanted DIGIT instance
 
 # Multi Tenancy - Central Instance
 
-DIGIT being a distributed system, hosting the DIGIT services as a Central SaaS Instance is surely an option and scaling the all/specific services/workloads depending on each state's needs/requirements. To achieve the same **Multi tenancy** is a key topic. We experienced this increased interest first hand at CDG. This interest is further curated by the results of the most respondents who indicated the use of a central instance simplifies the infra/operation for individual states or Small states with a deep isolation of access, services and resources. The emphasis on a central instance are the security, privacy and independant customization/configs which is an obvious challenge that DIGIT as a platform to address.
+DIGIT being a distributed system, hosting the DIGIT services as a Central SaaS Instance is surely an option and scaling the all/specific services/workloads depending on each state's needs/requirements. To achieve the same, **Multi tenancy** is a key topic. We experienced this increased interest first hand at CDG. This interest is further curated by the results of the most respondents who indicated the use of a central instance simplifies the infra/operation for individual states or Small states with a deep isolation of access, services and resources. The emphasis on a central instance are the security, privacy and independant customization/configs which is an obvious challenge that DIGIT as a platform to address.
 
 Multi-tenancy is a hard nut to crack in the context of Infra depending on whether it is NIC or Commercial Cloud Infra. Comparatively, comercial clouds provide number of services that can simplify the process of isolating the infra resources using VPCs, Security groups, Encryptions, RBACs, operations, monitoring etc.
 
-In this article we will briefly review the concepts of tenants and multi-tenancy in the context of DIGIT Central Instance, identify the challenges that have to be overcome and outline best practices for Isolated development, customization, Deployments, DevOps and infra/operations admins operating multi-tenant Kubernetes clusters.
+In this article we will briefly review the concepts of tenants and multi-tenancy in the context of DIGIT Central Instance, identify the challenges that have to be overcome and outline best practices for Isolated development, customization, Deployments, DevOps and infra/operations admins operating multi-tenant Kubernetes clusters. Before we continue further it is important that we know difference between multiple-instance and Multi-tenant architecture, the below picture depicts the high level details on how it differs, however we'll be focusing only on the multi-tenant architecture throughout this page.
+
+![](<../../.gitbook/assets/image (52).png>)
 
 ### Who are Tenants in DIGIT Central Instance?
 
 The tenant defined as representing a groups of users who could be from either of a state, ULBs, applications, distributed teams, partners/system integrators, departments or projects. In any of these cases users that will have access to only a subset/intended DIGIT services on a centrally hosted instance, and the services might vary from a usergroup-to-usergroup depending upon the opted DIGIT municipal services. 
 
-The phenomenon of subsetting/Isolating the services from the central instance to a specific tenant also impacts the infra resources \(compute, storage, networking, control plane and API resources\) as well as resource limits and quotas for the use of those resources. Resource limits and quotas lay out tenant boundaries. These boundaries extend to the control plane allowing for grouping of the resources owned by the tenant, limited access or visibility to resources outside of the control plane domain and tenant authentication.
+The phenomenon of subsetting/Isolating the services from the central instance to a specific tenant also impacts the infra resources (compute, storage, networking, control plane and API resources) as well as resource limits and quotas for the use of those resources. Resource limits and quotas lay out tenant boundaries. These boundaries extend to the control plane allowing for grouping of the resources owned by the tenant, limited access or visibility to resources outside of the control plane domain and tenant authentication.
 
 Providing isolation and fail resource sharing between multiple users and their workloads within a cluster is an important aspect in DIGIT Single Instance as a multi-tenancy.
 
@@ -28,13 +30,13 @@ Hard multi-tenancy assumes tenants to be malicious and therefore advocates zero 
 
 This concept would need to be applied to Kubernetes namespaces as well. Rather than controlling resources like memory consumption and CPU, it would apply to nodes. The tenant within a namespace would only be able to access certain nodes designated to it. All the namespace services would be isolated at the machine level as well. No services from different tenants would run on the same machine. This could always be a setting in the future but the default should be that nodes are not shared.
 
-DIGIT Infra is essentially means kubernetes, Let’s look at multi-tenancy practices and the key considerations in the context of Kubernetes. Some of the best practices for DevOps \(Source Code, Deployment, Configs and cluster administrators\) operating multi-tenant Kubernetes clusters.
+DIGIT Infra is essentially means kubernetes, Let’s look at multi-tenancy practices and the key considerations in the context of Kubernetes. Some of the best practices for DevOps (Source Code, Deployment, Configs and cluster administrators) operating multi-tenant Kubernetes clusters.
 
 ### Multi-tenancy Best Practices and Key Considerations
 
-![](../../.gitbook/assets/image%20%2814%29.png)
+![](<../../.gitbook/assets/image (12).png>)
 
-![](../../.gitbook/assets/image%20%2829%29.png)
+![](<../../.gitbook/assets/image (16).png>)
 
 
 
@@ -61,36 +63,36 @@ Namespaces provide logical isolation between tenants on cluster. Kubernetes poli
 **Pros:**
 
 * Tenants can reuse extensions/controllers/CRDs
-* Shared control plane \(=shared ops, shared security/auditing...\)
+* Shared control plane (=shared ops, shared security/auditing...)
 
-#### 
+####
 
-![](../../.gitbook/assets/image%20%2819%29.png)
+![](<../../.gitbook/assets/image (20).png>)
 
 ### Kubernetes RBAC - Auth related.
 
-To achieve the multi-tenancy RBAC is an important aspect to isolate the access control, which **users/groups/service accounts**   
-can do **which operations**   
-on **which API resources**   
+To achieve the multi-tenancy RBAC is an important aspect to isolate the access control, which **users/groups/service accounts** \
+can do **which operations** \
+on **which API resources** \
 in **which** **namespaces**.
 
-![](../../.gitbook/assets/image%20%2818%29.png)
+![](<../../.gitbook/assets/image (21).png>)
 
 **These are mostly for:**
 
-* Giving access to pods calling the Kubernetes API\(with Kubernetes Service accounts\)
+* Giving access to pods calling the Kubernetes API(with Kubernetes Service accounts)
 * Giving fine-grained access to people/groups calling kubernetes API
 
 **The key concepts to achieve the above:**
 
-|  Kubernetes RBAC Objects | Description |
-| :--- | :--- |
-| ClusterRole | A preset of capabilities, cluster-wide |
-| Role | ClusterRole, but namespace-scoped |
-| ClusterRoleBinding | Give permission of a ClusterRole to |
-| RoleBinding | ClusterRoleBinding, but namespace-scoped |
+|  Kubernetes RBAC Objects | Description                              |
+| ------------------------ | ---------------------------------------- |
+| ClusterRole              | A preset of capabilities, cluster-wide   |
+| Role                     | ClusterRole, but namespace-scoped        |
+| ClusterRoleBinding       | Give permission of a ClusterRole to      |
+| RoleBinding              | ClusterRoleBinding, but namespace-scoped |
 
-```text
+```
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -162,7 +164,7 @@ roleRef:
 
 In a multi-tenancy cluster, it is important to isolate the access to various object which can be controlled via kubernetes network policies that allows to control the traffic to access specific pods from specific pods. For example: we can allow the tenants from a digit namespace matching the specific criteria of the tenant namespace, they can be authorized to gain the access either or both incoming and outgoing traffic. In case of fine-grained access control we can restrict it to the specific ipBlocks as well. 
 
-```text
+```
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
@@ -203,7 +205,7 @@ spec:
 
 As the primitives, resource isolation and setting quota is very very important on a multi-tenancy cluster. It helps in efficient utilization of the resources and also allows to optimize the resources for the workloads.  
 
-```text
+```
 apiVersion: v1
 kind: List
 items:
@@ -251,19 +253,19 @@ items:
         values: ["low"]
 ```
 
-![](../../.gitbook/assets/image%20%2826%29.png)
+![](<../../.gitbook/assets/image (28).png>)
 
-#### 
+####
 
 To see a list of all non-namespaced resources:
 
-```text
+```
 kubectl --kubeconfig cluster-admin api-resources --namespaced=false
 ```
 
 To see whether tenants can perform operations on resources:
 
-```text
+```
 kubectl --kubeconfig “tenant_name” auth can-i “verb” “resource”
 ```
 
@@ -273,13 +275,13 @@ Continuing from the previous best practice cluster admins should also ensure tha
 
 To see a list of all namespaced resources belonging to a tenant:
 
-```text
+```
 kubectl --kubeconfig “tenant_name” api-resources --namespaced=true
 ```
 
 To see whether tenants can perform operations on namespaced resources belonging to other tenants:
 
-```text
+```
 kubectl --kubeconfig “tenant_name” -n “namespace_name” “verb” “resource”
 ```
 
@@ -289,13 +291,13 @@ There is a subset of namespaced resources that should not be accessible to tenan
 
 To view list of resources managed by cluster admin:
 
-```text
+```
 kubectl --kubeconfig=cluster-admin -n “namespace_name” get all -l =
 ```
 
-To verify that the resource cannot be modified by the namespace tenant \(this requires labelling resources managed by the cluster admin\):
+To verify that the resource cannot be modified by the namespace tenant (this requires labelling resources managed by the cluster admin):
 
-```text
+```
 kubectl --dry-run=true --kubeconfig=”tenant_name” -n “namespace_name” annotate key1=value1
 ```
 
@@ -309,27 +311,26 @@ The Kubernetes multi-tenancy SIG provides an e-2-e test tool that can be used to
 
 To run the tool do the following:
 
-```text
+```
 git clone https://github.com/kubernetes-sigs/multi-tenancy.git
 ```
 
-```text
+```
 cd multi-tenancy/benchmarks
 ```
 
-Edit the config file \(config.yaml\) with your cluster configuration.
+Edit the config file (config.yaml) with your cluster configuration.
 
 Run tests:
 
-```text
+```
 go test ./e2e/tests
 ```
 
 Or with path to config file
 
-```text
+```
 go test ./e2e/tests -config 
 ```
 
-#### 
-
+####
